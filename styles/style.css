@@ -1,0 +1,150 @@
+/* Fonts: */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap&family=Roboto:wght@400;500&display=swap');
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+/* Patient Registration Page */
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  width: 1420px;
+  height: 100vh;
+  background: linear-gradient(to right, #FFFFFF 51%, #F5F7F9 49%);
+}
+
+
+/* Basic styles for header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.header-logo {
+  width: 220px;
+  height: 79px;
+  margin-left: 40px
+}
+
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 40px;
+}
+
+nav ul li a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+
+  padding: 8px 39px;
+  border: 1px solid #1B263B;
+  border-radius: 8px;
+
+  text-decoration: none;
+  color: #FFF;
+  background-color: #1B263B;
+}
+
+nav ul li a:hover {
+  background-color: #415A77;
+}
+
+/* Styles for main section */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.registration-form--title {
+  font-size: 48px;
+}
+
+.registration-form--descr {
+  font-size: 17px;
+  max-width: 600px;
+  padding-bottom: 27px;
+}
+
+.registration-form {
+  width: 800px;
+  padding: 50px;
+}
+
+.registration-form form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+}
+
+.registration-form label {
+  margin-bottom: 7px;
+}
+
+.registration-form input {
+  max-width: 450px;
+  padding: 11px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #F5F5F5;
+  margin-bottom: 20px;
+}
+
+.form-btn {
+  font-size: 17px;
+  width: 250px;
+  margin: 40px 110px 0;
+
+  padding: 10px 20px;
+  border: 1px solid #1B263B;
+  border-radius: 10px;
+
+  color: #FFF;
+  background: #1B263B;
+}
+
+.form-btn:hover {
+  background-color: #415A77;
+}
+
+.login-info {
+  margin: 30px 140px 0;
+}
+
+.login-info span {
+  font-weight: 700;
+  color: #1B263B;
+}
+
+.quote-section {
+  margin-top: 25px;
+}
+
+.quote-section img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 15px;
+}
+
+blockquote {
+  margin-top: 20px;
+}
+
+blockquote p {
+  font-style: italic;
+}
+
+blockquote footer {
+  margin-top: 10px;
+}
