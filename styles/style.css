@@ -58,6 +58,8 @@ nav ul li a {
 
 nav ul li a:hover {
   background-color: #415A77;
+  border: 1px solid #415A77;
+
 }
 
 /* Styles for main section */
@@ -116,6 +118,8 @@ main {
 
 .form-btn:hover {
   background-color: #415A77;
+  border: 1px solid #415A77;
+
 }
 
 .login-info {
