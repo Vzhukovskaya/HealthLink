@@ -27,6 +27,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+//Пути для получения данных с фейкового сервера:
+// http://localhost:3000/doctors - данные о докторах
+// http://localhost:3000/patients - данные о пациентах
+// http://localhost:3000/meetings - данные о приемах
+// http://localhost:3000/prescriptions - данные о назначениях
+
+
 // // Пример GET/POST запроса к фейковому серверу
 // fetch('http://') // Замените URL на  API
 //     .then(response => {
