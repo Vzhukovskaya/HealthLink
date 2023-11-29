@@ -1,3 +1,4 @@
+
 { "doctors": [
   {
     "id": 1,
@@ -85,3 +86,93 @@
   }
 ]
 }
+=======
+{
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. Samantha Perera",
+      "email": "doctor1@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Anthony Lopez",
+      "email": "doctor2@gmail.com",
+      "password": "23456"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Emily Downy",
+      "email": "doctor3@gmail.com",
+      "password": "34567"
+    }
+  ],
+  "patients": [
+    {
+      "id": 1,
+      "name": "Shalinda Fernando",
+      "location": "Ja Ela",
+      "email": "patient1@gmail.com",
+      "password": "qwerty"
+    },
+    {
+      "id": 2,
+      "name": "Sebastian Mullins",
+      "location": "Jaffna",
+      "email": "patient2@gmail.com",
+      "password": "asdfgh"
+    },
+    {
+      "id": 3,
+      "name": "Sanaa Manning",
+      "location": "Galle",
+      "email": "patient3@gmail.com",
+      "password": "zxcvb"
+    }
+  ],
+  "meetings": [
+    {
+      "id": 1,
+      "date": "Apr 23, 2021 - 10.00AM",
+      "patientId": 1,
+      "doctorID": 1,
+      "meetLink": "https://meet.google.com/gfa-caog-gwq"
+    },
+    {
+      "id": 2,
+      "date": "Apr 23, 2021 - 11.00AM",
+      "patientId": 2,
+      "doctorID": 2,
+      "meetLink": "https://meet.google.com/gfa-caog-gwj"
+    },
+    {
+      "id": 3,
+      "date": "Apr 23, 2021 - 12.00AM",
+      "patientId": 3,
+      "doctorID": 2,
+      "meetLink": "https://meet.google.com/gfa-caog-gwr"
+    }
+  ],
+  "prescriptions": [
+    {
+      "id": 1,
+      "meetId": 1,
+      "complaints": "Headache",
+      "prescriptions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "id": 2,
+      "meetId": 2,
+      "complaints": "Sore throat",
+      "prescriptions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "id": 3,
+      "meetId": 3,
+      "complaints": "Cough",
+      "prescriptions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    }
+  ]
+}
+
