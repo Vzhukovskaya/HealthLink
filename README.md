@@ -1,11 +1,11 @@
 
-Languages: 
+Languages: HTML/CSS, Java Script.
 
 TeamLead: 
 
 TechLead: @Vzhukovskaya
 
-Frontend Developers: 
+Frontend Developers: @Vzhukovskaya
 
 Tester:
 
