@@ -1,7 +1,6 @@
 /* Patient Registration Page */
 
 document.addEventListener('DOMContentLoaded', function () {
-    const formBtn = document.querySelector('.form-btn');
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
     const confirmPasswordInput = document.getElementById('confirmPassword');
@@ -71,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-});
 
 //Пути для получения данных с фейкового сервера:
 // http://localhost:3000/doctors - данные о докторах
@@ -80,20 +78,4 @@ document.addEventListener('DOMContentLoaded', function () {
 // http://localhost:3000/prescriptions - данные о назначениях
 
 
-// // Пример GET/POST запроса к фейковому серверу
-// fetch('http://') // Замените URL на  API
-//     .then(response => {
-//         if (!response.ok) {
-//             throw new Error('Network response was not ok');
-//         }
-//         return response.json();
-//     })
-//     .then(data => {
-//         // Обработка полученных данных
-//         console.log('Data:', data);
-//         // Здесь нужно обновить интерфейс, используя полученные данные
-//     })
-//     .catch(error => {
-//         console.error('There was a problem with the fetch operation:', error);
-//     });
 
