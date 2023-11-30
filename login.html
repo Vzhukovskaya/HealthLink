@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patient Registration</title>
+  <title>Patient Login</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -22,11 +22,9 @@
 
   <main>
     <div class="registration-form">
-      <h1 class="registration-form--title">Patient Register</h1>
-      <p class="registration-form--descr">Here you can register and get opportunity to use your personal account, it's
-        ease fore searching and creation
-        an
-        appointments with doctor.</p>
+      <h1 class="registration-form--title">Patient Login</h1>
+      <p class="registration-form--descr">Use your personal account to make an appointment with a doctor and follow the
+        established recommendations.</p>
 
       <form class="registration-form" id="patientRegistrationForm">
         <label for="email">Email:</label>
@@ -37,14 +35,11 @@
         <input type="password" id="password" name="password" required>
         <div class="error-message" id="password-error"></div>
 
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required>
-        <div class="error-message" id="confirmPassword-error"></div>
-
-        <button class="form-btn" type="submit">Register Patient</button>
+        <p class="password-info">Forgot Password ?</p>
+        <button class="form-btn" type="submit">Login</button>
       </form>
       <p class="reply"></p>
-      <p class="login-info">Already have an account. <a href="#"><span>Login as a patient</span></a></p>
+      <p class="login-info">Don’t have an account. <a href="#"><span>Register as a patient</span></a></p>
     </div>
 
     <div class="quote-section">
@@ -56,7 +51,6 @@
     </div>
   </main>
 
-  <script src="script/script.js"></script>
 </body>
 
 </html>

@@ -80,7 +80,7 @@ main {
 
 .registration-form {
   width: 800px;
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
 .registration-form form {
@@ -134,6 +134,7 @@ main {
 .login-info span {
   font-weight: 700;
   color: #1B263B;
+  text-decoration: underline #1B263B;
 }
 
 .quote-section {
