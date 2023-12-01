@@ -1,0 +1,81 @@
+/* Общие стили сайта */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap&family=Roboto:wght@400;500&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  width: 1420px;
+  height: 100vh;
+}
+
+.header-logo {
+  height: 70px;
+  margin-left: 10px;
+  margin-bottom: 60px;
+}
+
+/* Стили левой части страницы */
+aside {
+  width: 20%;
+  float: left;
+  margin-left: 30px;
+  color: rgba(65, 90, 119, 1);
+  font-weight: 700;
+  background-color: #f5f7f9;
+}
+
+aside a:hover {
+  text-decoration: underline;
+}
+
+main {
+  float: left;
+  width: 80%;
+  float: right;
+  background-color: #ffffff;
+}
+
+/* Стили таблицы */
+.table {
+  display: flex;
+  margin-left: 10%;
+  margin-top: 0%;
+}
+
+table {
+  table-layout: inherit;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  font-weight: bold;
+  text-align: left;
+  border: none;
+  padding: 10px 15px;
+  background: #d8d8d8;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+.table thead tr th:first-child {
+  border-radius: 8px 0 0 8px;
+}
+.table thead tr th:last-child {
+  border-radius: 0 8px 8px 0;
+}
+.table tbody td {
+  text-align: center;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  vertical-align: top;
+}
+.table tbody tr:nth-child(even) {
+  background: #f3f3f3;
+}
+.table tbody tr td:first-child {
+  border-radius: 8px 0 0 8px;
+}
+.table tbody tr td:last-child {
+  border-radius: 0 8px 8px 0;
+}
