@@ -55,13 +55,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             })
             .then(data => {
-                console.log(data);
-                // Скрыть форму после успешной регистрации
-                registrationForm.classList.add('hidden');
+                // Сохранение ID пользователя в localStorage после успешной регистрации
+                localStorage.setItem('userId', data.id);
 
                 // Вывод сообщения о регистрации с ID пользователя
-                const replyDiv = document.querySelector('.reply');
-                replyDiv.textContent = `Thank you for registration, yours ID: ${data.id}.`;
+                const userId = localStorage.getItem('userId');
+                // const replyDiv = document.getElementById('replyDiv');
+                // const notification = document.createElement('div');
+                // notification.classList.add('notification');
+                alert(`Thank you for registration, yours ID: ${userId}.`);
+
+                replyDiv.appendChild(notification);
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
@@ -129,3 +133,59 @@ document.addEventListener('DOMContentLoaded', function () {
         return newId;
     }
 });
+
+/* Patient Login Page */
+
+document.addEventListener('DOMContentLoaded', function () {
+    const loginEmailInput = document.getElementById('loginEmail');
+    const loginPasswordInput = document.getElementById('loginPassword');
+    const loginForm = document.getElementById('patientLoginForm');
+    const notificationDiv = document.getElementById('notification');
+
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Отменить стандартное поведение отправки формы
+
+        const email = loginEmailInput.value;
+        const password = loginPasswordInput.value;
+
+        // Создание объекта с данными для отправки на сервер
+        const data = {
+            email: email,
+            password: password
+        };
+
+        // Опции для fetch-запроса
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        };
+
+        // Выполнение POST-запроса на сервер (необходимо указать правильный URL)
+        fetch('http://localhost:3000/patients', options)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .then(data => {
+                //if data.loggedIn равно true
+                if (data.loggedIn) {
+                    // Переход на страницу личного кабинета или другие действия
+                    window.location.href = 'personal_cabinet.html';
+                } else {
+                    // Обновление текста уведомления при неудачной авторизации
+                    alert('Login failed. Please check your credentials.');
+                }
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    });
+});
+
+
