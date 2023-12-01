@@ -1,18 +1,17 @@
 /* Fonts: */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap&family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap&family=Roboto:wght@400;500&display=swap");
 
 /* font-family: 'Inter', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
 /* Patient Registration Page */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   width: 1420px;
   height: 100vh;
-  background: linear-gradient(to right, #FFFFFF 51%, #F5F7F9 49%);
+  background: linear-gradient(to right, #ffffff 51%, #f5f7f9 49%);
 }
-
 
 /* Basic styles for header */
 header {
@@ -26,7 +25,7 @@ header {
 .header-logo {
   width: 220px;
   height: 79px;
-  margin-left: 55px
+  margin-left: 55px;
 }
 
 nav ul {
@@ -42,23 +41,22 @@ nav ul li:not(:last-child) {
 }
 
 nav ul li a {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 17px;
   font-weight: 400;
 
   padding: 8px 39px;
-  border: 1px solid #1B263B;
+  border: 1px solid #1b263b;
   border-radius: 8px;
 
   text-decoration: none;
-  color: #FFF;
-  background-color: #1B263B;
+  color: #fff;
+  background-color: #1b263b;
 }
 
 nav ul li a:hover {
-  background-color: #415A77;
-  border: 1px solid #415A77;
-
+  background-color: #415a77;
+  border: 1px solid #415a77;
 }
 
 /* Styles for main section */
@@ -98,7 +96,7 @@ main {
   padding: 11px;
   border-radius: 10px;
   border: 1px solid #000;
-  background: #F5F5F5;
+  background: #f5f5f5;
   margin-bottom: 10px;
 }
 
@@ -114,17 +112,16 @@ main {
   margin: 40px 110px 0;
 
   padding: 10px 20px;
-  border: 1px solid #1B263B;
+  border: 1px solid #1b263b;
   border-radius: 10px;
 
-  color: #FFF;
-  background: #1B263B;
+  color: #fff;
+  background: #1b263b;
 }
 
 .form-btn:hover {
-  background-color: #415A77;
-  border: 1px solid #415A77;
-
+  background-color: #415a77;
+  border: 1px solid #415a77;
 }
 
 .login-info {
@@ -133,8 +130,8 @@ main {
 
 .login-info span {
   font-weight: 700;
-  color: #1B263B;
-  text-decoration: underline #1B263B;
+  color: #1b263b;
+  text-decoration: underline #1b263b;
 }
 
 .quote-section {
@@ -152,7 +149,7 @@ main {
 }
 
 .blockquote::before {
-  content: '';
+  content: "";
   display: block;
   width: 62px;
   height: 49px;
@@ -162,11 +159,11 @@ main {
   top: 20px;
 
   background-repeat: no-repeat;
-  background-image: url(/images/quotes1.svg)
+  background-image: url(/images/quotes1.svg);
 }
 
 .blockquote::after {
-  content: '';
+  content: "";
   display: block;
   width: 62px;
   height: 49px;
@@ -191,7 +188,333 @@ main {
   margin-top: 20px;
 }
 
+.hidden {
+  display: none;
+}
+
+/* стили для homepage начало */
+/* Fonts: */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap&family=Roboto:wght@400;500&display=swap");
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+/* Patient Registration Page */
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  width: 1420px;
+  height: 100vh;
+  background: linear-gradient(to right, #ffffff 51%, #f5f7f9 49%);
+}
+
+/* Basic styles for header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.header-logo {
+  width: 220px;
+  height: 79px;
+  margin-left: 55px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 40px;
+}
+
+nav ul li a {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+
+  padding: 8px 39px;
+  border: 1px solid #1b263b;
+  border-radius: 8px;
+
+  text-decoration: none;
+  color: #fff;
+  background-color: #1b263b;
+}
+
+nav ul li a:hover {
+  background-color: #415a77;
+  border: 1px solid #415a77;
+}
+
+/* Styles for main section */
+main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.registration-form--title {
+  font-size: 48px;
+}
+
+.registration-form--descr {
+  font-size: 17px;
+  max-width: 600px;
+  padding-bottom: 27px;
+}
+
+.registration-form {
+  width: 800px;
+  margin-left: 50px;
+}
+
+.registration-form form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+}
+
+.registration-form label {
+  margin: 10px;
+}
+
+.registration-form input {
+  max-width: 450px;
+  padding: 11px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #f5f5f5;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  font-size: 13px;
+  max-width: 500px;
+  overflow-wrap: break-word;
+}
+
+.form-btn {
+  font-size: 17px;
+  width: 250px;
+  margin: 40px 110px 0;
+
+  padding: 10px 20px;
+  border: 1px solid #1b263b;
+  border-radius: 10px;
+
+  color: #fff;
+  background: #1b263b;
+}
+
+.form-btn:hover {
+  background-color: #415a77;
+  border: 1px solid #415a77;
+}
+
+.login-info {
+  margin: 30px 140px 0;
+}
+
+.login-info span {
+  font-weight: 700;
+  color: #1b263b;
+  text-decoration: underline #1b263b;
+}
+
+.quote-section {
+  margin-top: 25px;
+}
+
+.quote-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+.blockquote {
+  text-align: center;
+  margin-top: -20px;
+}
+
+.blockquote::before {
+  content: "";
+  display: block;
+  width: 62px;
+  height: 49px;
+
+  position: relative;
+  left: -50px;
+  top: 20px;
+
+  background-repeat: no-repeat;
+  background-image: url(/images/quotes1.svg);
+}
+
+.blockquote::after {
+  content: "";
+  display: block;
+  width: 62px;
+  height: 49px;
+
+  position: relative;
+  left: 465px;
+  bottom: 110px;
+
+  background-repeat: no-repeat;
+  background-image: url(/images/quotes2.svg);
+}
+
+.quote-descr,
+.quote-footer {
+  font-size: 20px;
+  width: 400px;
+  margin: 0;
+  padding-left: 30px;
+}
+
+.quote-footer {
+  margin-top: 20px;
+}
 
 .hidden {
   display: none;
 }
+
+/* styles for homepage's header */
+main {
+  width: 100vw;
+}
+
+.homepage_upside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100vw;
+  height: 83rem;
+}
+
+.upside_right_nav {
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.left_header-logo {
+  width: 24rem;
+  height: 5.6rem;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.upside_right {
+  background-image: url("../images/designer_1.svg");
+  width: 100%;
+  height: 80%;
+}
+
+.upside_left_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-style: Roboto;
+  width: 40rem;
+  height: 27rem;
+  margin-top: 30%;
+  margin-left: 10%;
+}
+
+.content_HealthLink {
+  font-weight: 500;
+  font-size: 4.6rem;
+  line-height: 4.6rem;
+}
+
+.content_text,
+.mission_text,
+.samthing1_text {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2/6rem;
+  color: rgba(80, 95, 152, 1);
+}
+
+.homepage_downside {
+  width: 100vw;
+  height: 117rem;
+}
+
+footer {
+  width: 100vw;
+  height: 23vh;
+  background-color: rgba(27, 38, 59, 1);
+}
+
+.downside_about {
+  width: 100vw;
+  height: 53rem;
+}
+
+.downside_buy {
+  width: 100vw;
+  height: 65rem;
+}
+
+.about_all {
+  width: 108rem;
+  height: 15rem;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 1fr;
+  margin: auto;
+}
+
+.about_all_leftSide {
+  grid-area: 1/1/2/2;
+}
+
+.about_all_rightSide {
+  display: grid;
+  grid-column: 1fr 1fr;
+  grid-row: 1fr 1fr;
+}
+
+.mission_title {
+  font: Roboto;
+  font-weight: 500;
+  font-size: 2.6rem;
+  width: 64rem;
+  height: 15rem;
+  grid-area: 1/1/2/3;
+}
+
+.about_all_samthing1 {
+  grid-area: 2/1/3/2;
+}
+
+/* .about_all_samthing1.1 {
+  grid-area: 2/2/3/3;
+} */
+
+.samthing1_title {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+.samthing1_text {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: rgba(111, 124, 178, 1);
+}
+
+.samthing1_icon {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+/* стили для homepage конец */
