@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/create_meeting.css">
+    <link rel="icon" href="images/Logo_hands.png">
+    <title>Health Link</title>
+</head>
+
+<body>
+    <main>
+        <aside class="sidebar">
+            <div class="sidebar__logo">
+                <img src="images/Logo_hands.png" alt="logo" class="sidebar__logo_logo">
+                <img src="images/Health Link.svg" alt="" class="sidebar__logo_title">
+            </div>
+            <div class="sidebar__menu">
+                <div class="sidebar__menu_item">
+                    <div class="sidebar__menu_item_title">Sessions</div>
+                    <div class="sidebar__menu_option">
+                        <img src="images/create_a_meeting.png" alt="" class="sidebar__menu_option_icon">
+                        <a href="#" class="sidebar-greytext sidebar-greytext_active">Create a meeting</a>
+                    </div>
+                    <div class="sidebar__menu_option">
+                        <img src="images/create_a_meeting.png" alt="" class="sidebar__menu_option_icon">
+                        <a href="#" class="sidebar-greytext">Connect with Doctor</a>
+                    </div>
+                    <div class="sidebar__menu_option">
+                        <img src="images/chatIcon.svg" alt="" class="sidebar__menu_option_icon">
+                        <a href="#" class="sidebar-greytext">Chat with HealthBot</a>
+                    </div>
+                    <div class="sidebar__menu_option">
+                        <img src="images/queueIcon.svg" alt="" class="sidebar__menu_option_icon">
+                        <a href="#" class="sidebar-greytext">Patient Waiting Queue</a>
+                    </div>
+                </div>
+                <div class="sidebar__menu_item">
+                    <div class="sidebar__menu_item_title other-options">Other options</div>
+                    <div class="sidebar__menu_option">
+                        <img src="images/dashboard.png" alt="" class="sidebar__menu_option_icon">
+                        <a href="#" class="sidebar-greytext">Dashboard</a>
+                    </div>
+                    <div class="sidebar__menu_option">
+                        <img src="images/logout.png" alt="" class="sidebar__menu_option_icon">
+                        <a href="#" class="sidebar-greytext" id="docDashboardLogout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <section class="main-section">
+            <div class="main-section__title">
+                <div class="main-section__title_greeting">
+                    <img src="images/waving-hand-sign_1f44b 1.png" alt="Hi!" class="main-section__title_greeting-logo">
+                    <div class="main-section__title_greeting-text">Good Afternoon</div>
+                </div>
+                <div class="main-section__title_name">Patient Dashboard</div>
+            </div>
+            <div class="main-section__create-meeting">
+                <h4 class="main-section__create-meeting_title">Create Meeting</h4>
+                <p class="main-section__create-meeting_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <button id="createMeetBtn" class="main-section__create-meeting_button" type="button">Create
+                    Meeting</button>
+                <img src="images/Face to face-rafiki 2.png" alt="image" class="main-section__img">
+            </div>
+            <div class="main-section__patient-queue">
+                <div class="main-section__patient-queue_title">Patient Queue</div>
+                <table id="doctorDashbordTable">
+                    <tr class="table-head">
+                        <th style="width: 30%">PATIENT NAME</th>
+                        <th style="width: 20%">JOINED DATE & TIME</th>
+                        <th style="width: 30%">EMAIL</th>
+                        <th style="width: 20%">OPTION</th>
+                    </tr>
+                </table>
+
+            </div>
+        </section>
+        <div id="modalCreateMeeting" class="modal__create-meeting">
+            <button id="modalCloseBtn" class="modal__close-btn"><img src="images/Vector (1).svg" alt=""
+                    type="button"></button>
+            <div class="modal__main">
+                <img src="images/Vector (2).svg" alt="icon" class="modal__icon">
+                <h2 class="modal__title">Create Instant Meet</h2>
+                <p class="modal__text">Create an instant google meet for your patients to join</p>
+            </div>
+            <div class="modal__buttons">
+                <button id="modalAgreeBtn" class="modal__agree-btn"><img src="images/check.svg" alt="" type="button">
+                    Create
+                    Meet</button>
+                <button id="modalCancelBtn" class="modal__cancel-btn">Cancel</button>
+            </div>
+        </div>
+        <div id="modalCreateMeetForm" class="modal__create-meeting_form">
+            <button id="modalFormCloseBtn" class="modal__close-btn"><img src="images/Vector (1).svg" alt=""
+                    type="button"></button>
+            <h2 class="modal__title">Create Instant Meet</h2>
+            <form id="modalForm" class="modal-form" action="">
+                <label for="modalNameInput">Patient name:</label>
+                <input id="modalNameInput" type="text" name="modalNameInput">
+                <label for="modalDateInput">Choose your meeting date:</label>
+                <input id="modalDateInput" type="date" name="modalDateInput">
+                <label for="modalSelectDoctor">Chose your doctor:</label>
+                <select id="modalSelectDoctor" name="modalSelectDoctor">
+                    <option value="">Chose your doctor from the list</option>
+                    <option value="doctor1">Doctor 1</option>
+                    <option value="doctor2">Doctor 2</option>
+                    <option value="doctor3">Doctor 3</option>
+                </select>
+            </form>
+            <div class="modal__buttons">
+                <button id="modalFormAgreeBtn" class="modal__agree-btn" type="button"><img src="images/check.svg"
+                        alt="">
+                    Create Meet</button>
+                <button id="modalFormCancelBtn" class="modal__cancel-btn" type="button">Cancel</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script/create_meeting.js"></script>
+</body>
+
+</html>
