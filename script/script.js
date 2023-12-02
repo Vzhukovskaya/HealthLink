@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 //if data.loggedIn равно true
                 if (data.loggedIn) {
                     // Переход на страницу личного кабинета или другие действия
-                    window.location.href = 'personal_cabinet.html';
+                    window.location.href = 'create_meeting.html';
                 } else {
                     // Обновление текста уведомления при неудачной авторизации
                     alert('Login failed. Please check your credentials.');
