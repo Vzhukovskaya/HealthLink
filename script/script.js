@@ -140,7 +140,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginEmailInput = document.getElementById('loginEmail');
     const loginPasswordInput = document.getElementById('loginPassword');
     const loginForm = document.getElementById('patientLoginForm');
-    const notificationDiv = document.getElementById('notification');
+    const loginBtn = document.getElementById('loginBtn');
+
+    loginEmailInput.addEventListener('input', validateForm);
+    loginPasswordInput.addEventListener('input', validateForm);
+
+    // Функция validateForm проверяет, заполнены ли оба поля. Если оба поля заполнены, кнопка "Login" становится активной, в противном случае она остается неактивной.
+
+    function validateForm() {
+        if (loginEmailInput.value.trim() !== '' && loginPasswordInput.value.trim() !== '') {
+            loginBtn.removeAttribute('disabled');
+        } else {
+            loginBtn.setAttribute('disabled', 'disabled');
+        }
+    }
 
     loginForm.addEventListener('submit', function (event) {
         event.preventDefault(); // Отменить стандартное поведение отправки формы
@@ -173,19 +186,65 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             })
             .then(data => {
-                //if data.loggedIn равно true
+                const notificationDiv = document.getElementById('notification');
+
                 if (data.loggedIn) {
-                    // Переход на страницу личного кабинета или другие действия
-                    window.location.href = 'create_meeting.html';
+                    window.location.href = 'create_meeting.html'; // Перенаправление на другую страницу при успешном входе
                 } else {
-                    // Обновление текста уведомления при неудачной авторизации
-                    alert('Login failed. Please check your credentials.');
+                    notificationDiv.textContent = 'Login failed. Please check your credentials.'; // Вывод сообщения об ошибке
+                    notificationDiv.style.color = 'red'; // Пример добавления стиля для сообщения об ошибке
+
+                    // Скрыть сообщение через 5 секунд (300000 миллисекунд)
+                    setTimeout(function () {
+                        notificationDiv.textContent = ''; // Очистить текст сообщения
+                    }, 300000);
                 }
             })
             .catch(error => {
-                console.error('There was a problem with the fetch operation:', error);
+                const notificationDiv = document.getElementById('notification');
+                notificationDiv.textContent = 'There was a problem with the fetch operation: ' + error.message; // Вывод сообщения об ошибке запроса
+                notificationDiv.style.color = 'red'; // Пример добавления стиля для сообщения об ошибке
             });
     });
 });
+
+
+const notificationDiv = document.getElementById('notificationDiv');
+const closeNotificationBtn = document.getElementById('closeNotificationBtn');
+const loginPasswordInput = document.getElementById('loginPassword');
+const showPasswordIcon = document.getElementById('showPassword');
+
+
+// Показываем сообщение об ошибке при нажатии на кнопку входа
+const loginBtn = document.getElementById('loginBtn');
+loginBtn.addEventListener('click', function (event) {
+    event.preventDefault(); // Отменяем стандартное поведение кнопки
+
+    // Здесь должен быть ваш код отправки запроса и обработки ответа
+    // ...
+
+    const data = {
+        loggedIn: false // Пример ответа от сервера
+    };
+
+    if (!data.loggedIn) {
+        notificationDiv.style.display = 'block'; // Отображаем сообщение об ошибке
+    }
+});
+
+// Скрываем сообщение об ошибке при клике на него
+notificationDiv.addEventListener('click', function () {
+    notificationDiv.style.display = 'none'; // Скрываем сообщение об ошибке
+});
+
+// Скрипт для работы режима "просмотра" пароля:
+showPasswordIcon.addEventListener('click', function () {
+    if (loginPasswordInput.type === 'password') {
+        loginPasswordInput.type = 'text';
+    } else {
+        loginPasswordInput.type = 'password';
+    }
+});
+
 
 
