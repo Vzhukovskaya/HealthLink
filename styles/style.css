@@ -101,8 +101,8 @@ main {
 }
 
 .error-message {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
   max-width: 500px;
   overflow-wrap: break-word;
 }
@@ -110,7 +110,7 @@ main {
 .form-btn {
   font-size: 17px;
   width: 250px;
-  margin: 30px 110px 0;
+  margin: 25px 110px 0;
 
   padding: 10px 20px;
   border: 1px solid #1B263B;
@@ -205,9 +205,13 @@ main {
 
 #notificationDiv {
   display: none;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 30px;
   text-align: center;
 
+
+  margin-top: 20px;
   color: red;
   cursor: pointer;
 }
