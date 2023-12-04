@@ -42,137 +42,19 @@
       "password": "zxcvb"
     },
     {
-      "id": 83,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Khraban1996"
+      "email": "ignateva-darya@mail.ru",
+      "password": "1234567",
+      "id": 4
     },
     {
-      "id": 88,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Khraban1996"
+      "email": "ignateva-darya@mail.ru",
+      "password": "1234567",
+      "id": 5
     },
     {
-      "id": 42,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Valeriia1996"
-    },
-    {
-      "id": 24,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Khraban1996"
-    },
-    {
-      "id": 80,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Lera12345"
-    },
-    {
-      "id": 94,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Lera1996"
-    },
-    {
-      "id": 16,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Zhukovska1996"
-    },
-    {
-      "id": 69,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Lera12345678"
-    },
-    {
-      "id": 5,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Zhukovska1234567"
-    },
-    {
-      "id": 33,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Khraban171717"
-    },
-    {
-      "id": 10,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "LeraKhraban7"
-    },
-    {
-      "email": "zhukovskaleriya@ukr.net",
-      "password": "999",
-      "id": 95
-    },
-    {
-      "email": "zhukovskaleriya@ukr.net",
-      "password": "ш8877",
-      "id": 96
-    },
-    {
-      "id": 48,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "LeraKhraban1"
-    },
-    {
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Лркфифт1996",
-      "id": 97
-    },
-    {
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Лркфифт1996",
-      "id": 98
-    },
-    {
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Лркфифт1996",
-      "id": 99
-    },
-    {
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "мвымв",
-      "id": 100
-    },
-    {
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "пквав",
-      "id": 101
-    },
-    {
-      "email": "zhukovskaleriya@ukr.net",
-      "password": "маямвы",
-      "id": 102
-    },
-    {
-      "email": "zhukovskaleriya@ukr.net",
-      "password": "ичиаи",
-      "id": 103
-    },
-    {
-      "email": "valeriazhukovskaya789@gmail.com",
-      "id": 104
-    },
-    {
-      "email": "zhukovskaleriya@ukr.net",
-      "id": 105
-    },
-    {
-      "id": 40,
-      "email": "zhukovskaleriya@ukr.net",
-      "password": "Zhukovskaleriya17"
-    },
-    {
-      "email": "zhukovskaleriya@ukr.net",
-      "password": "Zhukovskaleriya17",
-      "id": 106
-    },
-    {
-      "id": 11,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Night1717"
-    },
-    {
-      "id": 38,
-      "email": "valeriazhukovskaya789@gmail.com",
-      "password": "Valeriia11"
+      "email": "ignateva-darya@mail.ru",
+      "password": "12345",
+      "id": 6
     }
   ],
   "meetings": [
@@ -184,16 +66,16 @@
       "meetLink": "https://meet.google.com/gfa-caog-gwq"
     },
     {
-      "id": 2,
-      "date": "Apr 23, 2021 - 11.00AM",
-      "patientId": 2,
-      "doctorID": 2,
-      "meetLink": "https://meet.google.com/gfa-caog-gwj"
-    },
-    {
       "id": 3,
       "date": "Apr 23, 2021 - 12.00AM",
       "patientId": 3,
+      "doctorID": 2,
+      "meetLink": "https://meet.google.com/gfa-caog-gwr"
+    },
+    {
+      "id": 2,
+      "date": "Apr 23, 2021 - 12.00AM",
+      "patientId": 1,
       "doctorID": 2,
       "meetLink": "https://meet.google.com/gfa-caog-gwr"
     }

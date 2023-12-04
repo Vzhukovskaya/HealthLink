@@ -1,16 +1,16 @@
 /* Fonts: */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap&family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap&family=Roboto:wght@400;500&display=swap");
 
 /* font-family: 'Inter', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
 /* Patient Registration Page */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   width: 1420px;
   height: 100vh;
-  background: linear-gradient(to right, #FFFFFF 51%, #F5F7F9 49%);
+  background: linear-gradient(to right, #ffffff 51%, #f5f7f9 49%);
 }
 
 /* Basic styles for header */
@@ -24,7 +24,7 @@ header {
 .header-logo {
   width: 250px;
   height: 79px;
-  margin-left: 55px
+  margin-left: 55px;
 }
 
 nav ul {
@@ -40,23 +40,22 @@ nav ul li:not(:last-child) {
 }
 
 nav ul li a {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 17px;
   font-weight: 400;
 
   padding: 8px 39px;
-  border: 1px solid #1B263B;
+  border: 1px solid #1b263b;
   border-radius: 8px;
 
   text-decoration: none;
-  color: #FFF;
-  background-color: #1B263B;
+  color: #fff;
+  background-color: #1b263b;
 }
 
 nav ul li a:hover {
-  background-color: #415A77;
-  border: 1px solid #415A77;
-
+  background-color: #415a77;
+  border: 1px solid #415a77;
 }
 
 /* Styles for main section */
@@ -96,7 +95,7 @@ main {
   border-radius: 10px;
   border: 1px solid #000;
   background: #F5F5F5;
-  margin-bottom: 3px;
+  margin-bottom: 3pxж
 }
 
 .error-message {
@@ -112,7 +111,7 @@ main {
   margin: 35px 110px 0;
 
   padding: 10px 20px;
-  border: 1px solid #1B263B;
+  border: 1px solid #1b263b;
   border-radius: 10px;
 
   cursor: pointer;
@@ -121,9 +120,8 @@ main {
 }
 
 .form-btn:hover {
-  background-color: #415A77;
-  border: 1px solid #415A77;
-
+  background-color: #415a77;
+  border: 1px solid #415a77;
 }
 
 .login-info {
@@ -132,8 +130,8 @@ main {
 
 .login-info span {
   font-weight: 700;
-  color: #1B263B;
-  text-decoration: underline #1B263B;
+  color: #1b263b;
+  text-decoration: underline #1b263b;
 }
 
 .quote-section {
@@ -151,7 +149,7 @@ main {
 }
 
 .blockquote::before {
-  content: '';
+  content: "";
   display: block;
   width: 62px;
   height: 49px;
@@ -161,11 +159,11 @@ main {
   top: 20px;
 
   background-repeat: no-repeat;
-  background-image: url(/images/quotes1.svg)
+  background-image: url(/images/quotes1.svg);
 }
 
 .blockquote::after {
-  content: '';
+  content: "";
   display: block;
   width: 62px;
   height: 49px;
@@ -188,6 +186,10 @@ main {
 
 .quote-footer {
   margin-top: 20px;
+}
+
+.hidden {
+  display: none;
 }
 
 .password-info {
