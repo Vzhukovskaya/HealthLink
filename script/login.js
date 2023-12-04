@@ -8,10 +8,49 @@ document.addEventListener('DOMContentLoaded', function () {
     const notificationDiv = document.getElementById('notificationDiv');
     const showPasswordIcon = document.getElementById('showPassword');
 
-    loginEmailInput.addEventListener('input', validateForm);
-    loginPasswordInput.addEventListener('input', validateForm);
+    loginEmailInput.addEventListener('input', async function () {
+        await checkUserExists();
+        validateForm();
+    });
 
-    // Функция validateForm проверяет, заполнены ли оба поля. Если оба поля заполнены, кнопка "Login" становится активной, в противном случае она остается неактивной.
+    async function checkUserExists() {
+        const email = loginEmailInput.value.trim();
+
+        // Создание объекта с данными для отправки на сервер
+        const data = {
+            email: email
+        };
+
+        // Опции для fetch-запроса для проверки наличия пользователя по email
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        };
+
+        try {
+            const response = await fetch('http://localhost:3000/patients', options);
+            if (response.ok) {
+                const userExists = await response.json();
+                if (userExists) {
+                    loginBtn.removeAttribute('disabled');
+                } else {
+                    loginBtn.setAttribute('disabled', 'disabled');
+                    throw new Error('No such patient exists. Please register first.');
+                }
+            } else {
+                loginBtn.setAttribute('disabled', 'disabled');
+                throw new Error('An error occurred while verifying the user.');
+            }
+        } catch (error) {
+            console.error('Error checking user existence:', error);
+            notificationDiv.textContent = error.message;
+            notificationDiv.style.display = 'block';
+        }
+    }
+
     function validateForm() {
         if (loginEmailInput.value.trim() !== '' && loginPasswordInput.value.trim() !== '') {
             loginBtn.removeAttribute('disabled');

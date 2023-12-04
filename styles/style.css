@@ -13,14 +13,12 @@ body {
   background: linear-gradient(to right, #FFFFFF 51%, #F5F7F9 49%);
 }
 
-
 /* Basic styles for header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 20px;
+  padding: 15px;
 }
 
 .header-logo {
@@ -71,6 +69,7 @@ main {
 
 .registration-form--title {
   font-size: 48px;
+  margin-bottom: 0;
 }
 
 .registration-form--descr {
@@ -97,7 +96,7 @@ main {
   border-radius: 10px;
   border: 1px solid #000;
   background: #F5F5F5;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 }
 
 .error-message {
@@ -110,7 +109,7 @@ main {
 .form-btn {
   font-size: 17px;
   width: 250px;
-  margin: 25px 110px 0;
+  margin: 35px 110px 0;
 
   padding: 10px 20px;
   border: 1px solid #1B263B;
@@ -225,7 +224,11 @@ main {
 .eye-icon {
   position: absolute;
   right: 15px;
-  top: 67%;
+  top: 70%;
   transform: translateY(-50%);
   cursor: pointer;
+}
+
+.eye-icon-register {
+  top: 73%;
 }
