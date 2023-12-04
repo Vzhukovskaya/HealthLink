@@ -16,7 +16,7 @@ async function main() {
                 <td>${data[i].patient}</td>
                 <td>${data[i].doctor}</td>
                 <td>${data[i].date}</td>
-                <td><button data-id=${data[i].id}>Cancel</button></td>
+                <td><button data-id=${data[i].id} class="cancel_button">Cancel</button></td>
             </tr>`;
             tableBlock.innerHTML += row;
         }
@@ -104,5 +104,7 @@ async function deleteAppointment(id) {
 }
 
 function logout() {
-    localStorage.clear();
+    document.localStorage.clear();
+    document.sessionStorage.clear();
+    window.location.href = "login.html";
 }

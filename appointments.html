@@ -3,45 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="icon" href="images/Logo_hands.png" />
     <link rel="stylesheet" href="styles/appointments.css" />
     <title>Appointments</title>
   </head>
   <body>
-    <aside class="asidebar">
-      <img class="header-logo" src="/images/main.logo.svg" alt="Logo" />
-      <p>
-        <a class="sidebar-links" href="">Homepage</a>
-      </p>
-      <p>
-        <a class="sidebar-links" href="">Make an appointment</a>
-      </p>
-      <p>
-        <a class="sidebar-links" href="">Emergency Situation</a>
-      </p>
-      <p>
-        <a
-          class="sidebar-links"
-          id="logout_link"
-          onclick="logout()"
-          href="login.html"
-          >Logout</a
-        >
-      </p>
-    </aside>
     <main>
-      <div class="table">
-        <table>
+      <aside class="sidebar">
+        <div class="sidebar__logo">
+          <img
+            src="images/Logo_hands.png"
+            alt="logo"
+            class="sidebar__logo_logo"
+          />
+          <img
+            src="images/Health Link.svg"
+            alt=""
+            class="sidebar__logo_title"
+          />
+        </div>
+        <div class="sidebar__menu">
+          <div class="sidebar__menu_item">
+            <div class="sidebar__menu_item_title">Sessions</div>
+            <div class="sidebar__menu_option">
+              <img
+                src="images/create_a_meeting.png"
+                alt=""
+                class="sidebar__menu_option_icon"
+              />
+              <a href="create_meeting.html" class="sidebar-greytext"
+                >Create a meeting</a
+              >
+            </div>
+            <div class="sidebar__menu_option">
+              <img
+                src="images/create_a_meeting.png"
+                alt=""
+                class="sidebar__menu_option_icon"
+              />
+              <a href="homepage.html" class="sidebar-greytext">Homepage</a>
+            </div>
+            <div class="sidebar__menu_option">
+              <img
+                src="images/chatIcon.svg"
+                alt=""
+                class="sidebar__menu_option_icon"
+              />
+              <a href="EmergencyContact.html" class="sidebar-greytext"
+                >Emergency Contacts</a
+              >
+            </div>
+          </div>
+          <div class="sidebar__menu_item">
+            <div class="sidebar__menu_item_title other-options">
+              Other options
+            </div>
+            <div class="sidebar__menu_option">
+              <img
+                src="images/dashboard.png"
+                alt=""
+                class="sidebar__menu_option_icon"
+              />
+              <a href="create_meeting.html" class="sidebar-greytext"
+                >Dashboard</a
+              >
+            </div>
+            <div class="sidebar__menu_option">
+              <img
+                src="images/logout.png"
+                alt=""
+                class="sidebar__menu_option_icon"
+              />
+              <a href="login.html" onclick="logout()" class="sidebar-greytext"
+                >Logout</a
+              >
+            </div>
+          </div>
+        </div>
+      </aside>
+      <section class="main-section">
+        <div class="greeting-text">Good Afternoon</div>
+        <div class="table_title">Patient Queue</div>
+        <table id="appointments">
           <tr>
-            <th>Id</th>
-            <th>Patient's Name</th>
-            <th>Doctors's Name</th>
-            <th>Date</th>
-            <th>Action</th>
+            <th style="width: 10%">Id</th>
+            <th style="width: 30%">Patient's Name</th>
+            <th style="width: 30%">Doctors's Name</th>
+            <th style="width: 20%">Date</th>
+            <th style="width: 10%">Action</th>
           </tr>
           <tbody id="appointment-table"></tbody>
         </table>
-      </div>
+      </section>
       <div id="loading"></div>
     </main>
   </body>
