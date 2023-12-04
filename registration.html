@@ -1,67 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Patient Registration</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" href="images/Logo_hands.png" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Patient Registration</title>
-  <link rel="stylesheet" href="styles/style.css" />
-  <link rel="icon" href="images/Logo_hands.png">
-</head>
+  <body>
+    <header class="header">
+      <img class="header-logo" src="/images/main.logo.svg" alt="Logo" />
+      <nav>
+        <ul>
+          <li><a href="EmergencyContact.html">Emergency Contact</a></li>
+          <li><a href="#">I'm a Doctor</a></li>
+          <li><a href="login.html">I'm a Patient</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header class="header">
-    <img class="header-logo" src="/images/main.logo.svg" alt="Logo" />
-    <nav>
-      <ul>
-        <li><a href="#">Emergency Contact</a></li>
-        <li><a href="#">I'm a Doctor</a></li>
-        <li><a href="#">I'm a Patient</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <div class="registration-form">
-      <h1 class="registration-form--title">Patient Register</h1>
-      <p class="registration-form--descr">
-        Here you can register and get opportunity to use your personal
-        account, it's ease fore searching and creation an appointments with
-        doctor.
-      </p>
-
-      <form id="patientRegistrationForm">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <div class="error-message" id="email-error"></div>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <div class="error-message" id="password-error"></div>
-
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required>
-        <div class="error-message" id="confirmPassword-error"></div>
-
-        <button class="form-btn" id="registerBtn" type="submit">Register Patient</button>
-      </form>
-      <div id="replyDiv"></div>
-      <p class="login-info">Already have an account. <a href="login.html"><span>Login as a patient</span></a></p>
-    </div>
-
-    <div class="quote-section">
-      <img src="images/icon1-registration.png" alt="Physical therapy exercise" />
-      <div class="blockquote">
-        <p class="quote-descr">
-          It is no measure of health to be well adjusted to a profoundly sick
-          society.
+    <main>
+      <div class="registration-form">
+        <h1 class="registration-form--title">Patient Register</h1>
+        <p class="registration-form--descr">
+          Here you can register and get opportunity to use your personal
+          account, it's ease fore searching and creation an appointments with
+          doctor.
         </p>
-        <p class="quote-footer">-- Jiddu Krishnamurti</p>
+
+        <form id="patientRegistrationForm">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <div class="error-message" id="email-error"></div>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <div class="error-message" id="password-error"></div>
+
+          <label for="confirmPassword">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+          />
+          <div class="error-message" id="confirmPassword-error"></div>
+
+          <button class="form-btn" id="registerBtn" type="submit">
+            Register Patient
+          </button>
+        </form>
+        <div id="replyDiv"></div>
+        <p class="login-info">
+          Already have an account.
+          <a href="login.html"><span>Login as a patient</span></a>
+        </p>
       </div>
-    </div>
-  </main>
 
-  <script src="https://kit.fontawesome.com/944885f069.js" crossorigin="anonymous"></script>
-  <script src="script/registration.js"></script>
-</body>
+      <div class="quote-section">
+        <img
+          src="images/icon1-registration.png"
+          alt="Physical therapy exercise"
+        />
+        <div class="blockquote">
+          <p class="quote-descr">
+            It is no measure of health to be well adjusted to a profoundly sick
+            society.
+          </p>
+          <p class="quote-footer">-- Jiddu Krishnamurti</p>
+        </div>
+      </div>
+    </main>
 
+    <script
+      src="https://kit.fontawesome.com/944885f069.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script/registration.js"></script>
+  </body>
 </html>

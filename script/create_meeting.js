@@ -113,7 +113,7 @@ function getMeetings() {
 function logout() {
     document.localStorage.clear();
     document.sessionStorage.clear();
-    window.location.href = "#";
+    window.location.href = "login.html";
 }
 //Функция создания JSON для отправки на сервер инфо о новом приеме
 function createMeeting() {
