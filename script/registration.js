@@ -11,10 +11,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const passwordInput = document.getElementById('password');
     const confirmPasswordInput = document.getElementById('confirmPassword');
     const form = document.getElementById('patientRegistrationForm');
-    const registrationForm = document.querySelector('.registration-form');
+    const registerBtn = document.getElementById('registerBtn');
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+    // Изначально делаем кнопку неактивной
+    registerBtn.setAttribute('disabled', 'disabled');
+
+    function validateForm() {
+        const isEmailFilled = emailInput.value.trim() !== '';
+        const isPasswordFilled = passwordInput.value.trim() !== '';
+        const isConfirmPasswordFilled = confirmPasswordInput.value.trim() !== '';
+
+        if (isEmailFilled && isPasswordFilled && isConfirmPasswordFilled) {
+            registerBtn.removeAttribute('disabled'); // Активируем кнопку, если все поля заполнены
+        } else {
+            registerBtn.setAttribute('disabled', 'disabled'); // Деактивируем кнопку, если есть незаполненные поля
+        }
+    }
+
+    // Вызов функций:
+    emailInput.addEventListener('input', validateForm);
+    passwordInput.addEventListener('input', validateForm);
+    confirmPasswordInput.addEventListener('input', validateForm);
 
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Отменить стандартное поведение отправки формы
@@ -55,18 +75,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             })
             .then(data => {
-                console.log(data);
-                // Скрыть форму после успешной регистрации
-                registrationForm.classList.add('hidden');
+                // Сохранение ID пользователя в куки
+                document.cookie = `userID=${data.id}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
 
-                // Вывод сообщения о регистрации с ID пользователя
-                const replyDiv = document.querySelector('.reply');
-                replyDiv.textContent = `Thank you for registration, yours ID: ${data.id}.`;
+                // Вызов функции для вывода ID пользователя:
+                displayUserID(data.id);
+
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
             });
     });
+
+    // Функция для вывода ID пользователя в replyDiv.
+    function displayUserID(id) {
+        const replyDiv = document.getElementById('replyDiv');
+        replyDiv.innerHTML = `Thank you for registration. Your ID: ${id}`;
+    }
 
     // Функция для проверки корректности email
     function validateEmail(input) {
@@ -97,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return true; // Возвращаем true, если поле валидно
         }
     }
+
 
     // Функция для проверки совпадения паролей
     function validateConfirmPassword(input) {
@@ -129,3 +155,5 @@ document.addEventListener('DOMContentLoaded', function () {
         return newId;
     }
 });
+
+

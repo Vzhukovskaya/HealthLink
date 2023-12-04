@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/appointments.css" />
+    <title>Appointments</title>
+  </head>
+  <body>
+    <aside class="asidebar">
+      <img class="header-logo" src="/images/main.logo.svg" alt="Logo" />
+      <p>
+        <a class="sidebar-links" href="">Homepage</a>
+      </p>
+      <p>
+        <a class="sidebar-links" href="">Make an appointment</a>
+      </p>
+      <p>
+        <a class="sidebar-links" href="">Emergency Situation</a>
+      </p>
+      <p>
+        <a
+          class="sidebar-links"
+          id="logout_link"
+          onclick="logout()"
+          href="login.html"
+          >Logout</a
+        >
+      </p>
+    </aside>
+    <main>
+      <div class="table">
+        <table>
+          <tr>
+            <th>Id</th>
+            <th>Patient's Name</th>
+            <th>Doctors's Name</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+          <tbody id="appointment-table"></tbody>
+        </table>
+      </div>
+      <div id="loading"></div>
+    </main>
+  </body>
+  <script src="script/appointments.js"></script>
+</html>
