@@ -336,18 +336,26 @@ ul li a:hover {
     height: 629px;
     margin-left: 40px;
   }
+
+  .intro__left-part {
+    margin: 50px 0;
+  }
 }
 
 /* Третий медиа-запрос для планшетов */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .intro__right-part {
     width: 100vh;
-    margin-top: -250px;
+    margin-top: -150px;
   }
 
   .mission__left-part {
     width: 600px;
     height: 450px;
     margin-left: 20px;
+  }
+
+  .intro__left-part {
+    margin: 50px 0;
   }
 }
