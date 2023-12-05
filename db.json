@@ -42,21 +42,24 @@
       "password": "zxcvb"
     },
     {
+      "id": 45,
+      "name": "Daria Komarenko",
       "email": "ignateva-darya@mail.ru",
-      "password": "1234567",
-      "id": 4
+      "password": "Abc123abc"
     },
     {
-      "email": "ignateva-darya@mail.ru",
-      "password": "1234567",
-      "id": 5
+      "id": 81,
+      "name": "Daria Komarenko",
+      "email": "ignadarya@mail.ru",
+      "password": "123Abc123abc"
     },
     {
-      "email": "ignateva-darya@mail.ru",
-      "password": "12345",
-      "id": 6
+      "id": 63,
+      "name": "Ann Brown",
+      "email": "ann@mail.ru",
+      "password": "123abc123Abc"
     }
-  ],
+],
   "meetings": [
     {
       "id": 1,
