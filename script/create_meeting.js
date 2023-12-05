@@ -1,37 +1,3 @@
-
-/*function getDoctors() {
-    fetch('http://localhost:3000/doctors')
-        .then((result) => { return result.json() })
-        .then((data) => { console.log(data) })
-        .catch((error) => console.log(error))
-}
-
-getDoctors();
-
-function addDoctor() {
-    fetch('http://localhost:3000/doctors',
-        {
-            method: 'POST',
-            body: JSON.stringify(
-                {
-                    id: 28,
-                    name: "Dr. Anna Fedosova",
-                    email: "doctor4@gmail.com",
-                    password: "300687"
-                }
-            ),
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
-            }
-        }
-    )
-        .then((result) => { return result.json() })
-        .then((data) => { console.log(data) })
-        .catch((error) => console.log(error))
-}
-
-window.onload = getDoctors();*/
-
 const modalCloseBtn = document.getElementById('modalCloseBtn');
 const modalCreateMeeting = document.getElementById('modalCreateMeeting');
 const modalCancelBtn = document.getElementById('modalCancelBtn');
@@ -44,6 +10,10 @@ const modalFormCancelBtn = document.getElementById('modalFormCancelBtn');
 const modalFormAgreeBtn = document.getElementById('modalFormAgreeBtn');
 const modalForm = document.getElementById('modalForm');
 const modalNameInput = document.getElementById('modalNameInput');
+const modalDateInput = document.getElementById('modalDateInput');
+const modalSelectTime = document.getElementById('modalSelectTime');
+const modalSelectDoctor = document.getElementById('modalSelectDoctor');
+
 
 //Закрытие модального окна по нажатию на "крестик"
 modalCloseBtn.addEventListener('click', () => {
@@ -74,8 +44,37 @@ modalFormCancelBtn.addEventListener('click', () => {
 });
 
 //Здесь будет подтягиваться айдишник пациента из хранилища
-let patientId = 3;
+document.cookie = "userID=" + 1; //эту строчку надо убрать
+let patientId = Number(getCookie("userID"));
 
+//Подтягивание имени пациента и списка врачей в форму "Create meeting" по нажатию на кнопку "Create meeting" в модальном окне
+modalAgreeBtn.addEventListener('click', getPatientName(patientId), getDoctorsList());
+
+async function getPatientName(thisPatientId) {
+    await fetch('http://localhost:3000/patients?id=' + thisPatientId)
+        .then((result) => { return result.json() })
+        .then((data) => { modalNameInput.value = data[0].name })
+        .catch((error) => console.log(error))
+};
+
+
+
+function selectDoctorListHTML(object) {
+    let newOption = document.createElement('option');
+    newOption.textContent = object.name;
+
+    modalSelectDoctor.append(newOption);
+
+}
+
+async function getDoctorsList() {
+    await fetch('http://localhost:3000/doctors')
+        .then((result) => { return result.json() })
+        .then((data) => { data.forEach(object => selectDoctorListHTML(object)) })
+        .catch((error) => console.log(error))
+}
+
+let requestBtnsList = [];
 //Функция для формирования таблицы приемов (Patient Queue)
 function makeHtmlPatientQueue(object) {
     const table = document.getElementById('doctorDashbordTable');
@@ -83,57 +82,99 @@ function makeHtmlPatientQueue(object) {
     let newLine = document.createElement('tr');
 
     let newName = document.createElement('td');
-    newName.textContent = object.patient.name;
+    newName.textContent = object.doctor.name;
     newLine.append(newName);
 
     let newDate = document.createElement('td');
-    newDate.textContent = object.date;
+    newDate.textContent = object.date.slice(0, -10);
     newLine.append(newDate);
 
     let newEmail = document.createElement('td');
-    newEmail.textContent = object.patient.email;
+    newEmail.textContent = object.date.slice(-7);
     newLine.append(newEmail);
 
     let newOption = document.createElement('td');
-    newOption.innerHTML = '<button class="doctor-dashbord__table_btn">Request Entry</button>';
+    /*newOption.innerHTML = `<button class="doctor-dashbord__table_btn" id=${object.id}>Request Entry</button>`;*/
+    let newButton = document.createElement('button');
+    newButton.textContent = "Request Entry";
+    newButton.classList.add("doctor-dashbord__table_btn");
+    newButton.setAttribute("id", object.id);
+    requestBtnsList.push(newButton);
+
+    newOption.append(newButton);
     newLine.append(newOption);
 
     table.append(newLine);
 
 }
+console.log(requestBtnsList);
 //Функция для получения данных сервера о приемах и отображение в таблице Patient Queue
-function getMeetings() {
-    fetch('http://localhost:3000/meetings?_expand=patient&patientId=' + patientId)
+async function getMeetings() {
+    await fetch('http://localhost:3000/meetings?_expand=doctor&patientId=' + patientId)
         .then((result) => { return result.json() })
+        /*.then((data) => { console.log(data) })*/
         .then((data) => data.forEach(object => makeHtmlPatientQueue(object)))
-        .then((data) => { return data[0].patient.name })
         .catch((error) => console.log(error))
+
 }
 //Функция для выхода из профиля
 function logout() {
     document.localStorage.clear();
     document.sessionStorage.clear();
-    window.location.href = "login.html";
+    window.location.href = "#";
 }
+//Сохранение и изменение id доктора в куки при изменении селекта в форме
+modalSelectDoctor.addEventListener("change", showID);
+//Функция для получения id доктора по выбранному имени в форме
+async function showID() {
+    let doctorId = await fetch('http://localhost:3000/doctors?name=' + modalSelectDoctor.value)
+        .then((result) => { return result.json() })
+        .then((data) => { return data[0].id });
+    console.log(doctorId);
+    document.cookie = "doctorId=" + doctorId;
+}
+//Функция для получения значения куки по ключу
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
 //Функция создания JSON для отправки на сервер инфо о новом приеме
 function createMeeting() {
     let newMeeting = {
-        id: 89995,
-        date: "Apr 23, 2021 - 13.00AM",
-        patientId: 2,
-        doctorID: 1,
+        date: modalDateInput.value + " - " + modalSelectTime.value,
+        patientId: patientId,
+        doctorId: Number(getCookie("doctorId")),
         meetLink: "https://meet.google.com/gfa-caog-gytr",
         requested: false
     };
     return newMeeting;
 
 }
+
 //Функция для отправки данных о новом приеме на сервер
-function addMeeting() {
-    fetch('http://localhost:3000/meetings',
+async function addMeeting() {
+    /*console.log(createMeeting());*/
+    await fetch('http://localhost:3000/meetings',
         {
             method: 'POST',
             body: JSON.stringify(createMeeting()),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        }
+    )
+        .then((result) => { return result.json() })
+        .then((data) => { console.log(data) })
+        .catch((error) => console.log(error))
+}
+//Функция для изменения видимости ссылки
+async function changeLinkVisability(btnId) {
+    await fetch('http://localhost:3000/meetings?id=' + btnId,
+        {
+            method: 'PATCH',
+            body: JSON.stringify({ requested: false }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
             }
@@ -148,14 +189,17 @@ function addMeeting() {
 //Слушатель события для добавления встречи на сервер
 modalFormAgreeBtn.addEventListener('click', addMeeting);
 
-let patientName = '123';
-modalNameInput.value = patientName;
+/*let patientName = '123';
+modalNameInput.value = patientName;*/
 
 //Слушатель для выхода из учетки
 docDashboardLogout.addEventListener('click', logout);
 //Загрузка встреч пациента при загрузке страницы
 window.onload = getMeetings();
 
+let sendRequestBtns = document.getElementsByClassName('doctor-dashbord__table_btn');
 
 
+console.log(sendRequestBtns);
 
+console.log(Array.from(sendRequestBtns));

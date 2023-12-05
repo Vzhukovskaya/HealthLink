@@ -83,45 +83,36 @@
       "password": "12345",
       "id": 11
     }
-],
+  ],
   "meetings": [
     {
       "id": 1,
       "date": "Apr 23, 2021 - 10.00AM",
       "patientId": 1,
-      "doctorID": 1,
+      "doctorId": 1,
       "meetLink": "https://meet.google.com/gfa-caog-gwq"
     },
     {
       "id": 3,
       "date": "Apr 23, 2021 - 12.00AM",
       "patientId": 3,
-      "doctorID": 2,
+      "doctorId": 2,
       "meetLink": "https://meet.google.com/gfa-caog-gwr"
     },
     {
-      "id": 89995,
-      "date": "Apr 23, 2021 - 13.00AM",
-      "patientId": 2,
-      "doctorID": 1,
-      "meetLink": "https://meet.google.com/gfa-caog-gytr",
-      "requested": false
+      "id": 2,
+      "date": "Apr 23, 2021 - 12.00AM",
+      "patientId": 1,
+      "doctorId": 2,
+      "meetLink": "https://meet.google.com/gfa-caog-gwr"
     },
     {
-      "date": "Apr 23, 2021 - 13.00AM",
-      "patientId": "11",
-      "doctorID": 1,
+      "date": "2023-12-20 - 02:00PM",
+      "patientId": 1,
+      "doctorId": 2,
       "meetLink": "https://meet.google.com/gfa-caog-gytr",
       "requested": false,
-      "id": 89996
-    },
-    {
-      "date": "Apr 23, 2021 - 13.00AM",
-      "patientId": "11",
-      "doctorID": 1,
-      "meetLink": "https://meet.google.com/gfa-caog-gytr",
-      "requested": false,
-      "id": 89997
+      "id": 4
     }
   ],
   "prescriptions": [
