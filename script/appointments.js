@@ -1,7 +1,9 @@
+// Присваиваем переменным ссылки
 const urlMeetings = `http://localhost:3000/meetings`;
 const urlPatients = `http://localhost:3000/patients`;
 const urlDoctors = `http://localhost:3000/doctors`;
 
+// Функция, которая получает ID пользователя по хранящемуся cookie
 function getUserID() {
     const coookies = document.cookie.split("; ").reduce((acc, item) => {
         const [name, value] = item.split("=");
@@ -11,7 +13,7 @@ function getUserID() {
 
     return coookies.userID;
 }
-
+// Функция, которая посылает запрос в целом
 async function sendRequest(url, loadingBlock) {
     return await fetch(url)
         .then((response) => {
@@ -26,7 +28,7 @@ async function sendRequest(url, loadingBlock) {
             return data;
         });
 }
-
+// Функция, которая рендерит таблицу после получения данных
 function buildTable(data, tableBlock) {
     for (let i = 0; i < data.length; i++) {
         let row = `<tr>
@@ -39,7 +41,7 @@ function buildTable(data, tableBlock) {
         tableBlock.innerHTML += row;
     }
 }
-
+// Фукнция удаления записи
 async function deleteAppointment(id) {
     return await fetch(`${urlMeetings}/${id}`, {
         method: "DELETE",
@@ -51,7 +53,7 @@ async function deleteAppointment(id) {
         })
         .catch((err) => console.log(`cannot delete element: ${err}`));
 }
-
+// Функция собирает все полученные данные в один объект data
 function mergeData(meetings, doctors, user) {
     const data = [];
 
@@ -74,13 +76,13 @@ function mergeData(meetings, doctors, user) {
     }
     return data;
 }
-
+// Функция logout
 function logout() {
     document.localStorage.clear();
     document.sessionStorage.clear();
     window.location.href = "login.html";
 }
-
+// Главная функция main(), которую мы и вызываем на скрипте страницы
 async function main() {
     const tableBlock = document.getElementById("appointment-table");
     const loadingBlock = document.getElementById("loading");
