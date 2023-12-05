@@ -59,28 +59,36 @@
       "email": "ann@mail.ru",
       "password": "123abc123Abc"
     }
-],
+  ],
   "meetings": [
     {
       "id": 1,
       "date": "Apr 23, 2021 - 10.00AM",
       "patientId": 1,
-      "doctorID": 1,
+      "doctorId": 1,
       "meetLink": "https://meet.google.com/gfa-caog-gwq"
     },
     {
       "id": 3,
       "date": "Apr 23, 2021 - 12.00AM",
       "patientId": 3,
-      "doctorID": 2,
+      "doctorId": 2,
       "meetLink": "https://meet.google.com/gfa-caog-gwr"
     },
     {
       "id": 2,
       "date": "Apr 23, 2021 - 12.00AM",
       "patientId": 1,
-      "doctorID": 2,
+      "doctorId": 2,
       "meetLink": "https://meet.google.com/gfa-caog-gwr"
+    },
+    {
+      "date": "2023-12-20 - 02:00PM",
+      "patientId": 1,
+      "doctorId": 2,
+      "meetLink": "https://meet.google.com/gfa-caog-gytr",
+      "requested": false,
+      "id": 4
     }
   ],
   "prescriptions": [
