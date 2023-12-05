@@ -1,5 +1,3 @@
-/* Patient Login Page */
-
 document.addEventListener("DOMContentLoaded", function () {
     const loginEmailInput = document.getElementById("loginEmail");
     const loginPasswordInput = document.getElementById("loginPassword");
@@ -7,54 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginBtn = document.getElementById("loginBtn");
     const notificationDiv = document.getElementById("notificationDiv");
     const showPasswordIcon = document.getElementById("showPassword");
-
-    loginEmailInput.addEventListener(oninput, async function () {
-        await checkUserExists();
-        validateForm();
-    });
-
-    async function checkUserExists() {
-        const email = loginEmailInput.value.trim();
-
-        // Создание объекта с данными для отправки на сервер
-        const data = {
-            email: email,
-        };
-
-        // Опции для fetch-запроса для проверки наличия пользователя по email
-        const options = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-        };
-
-        try {
-            const response = await fetch(
-                "http://localhost:3000/patients",
-                options
-            );
-            if (response.ok) {
-                const userExists = await response.json();
-                if (userExists) {
-                    loginBtn.removeAttribute("disabled");
-                } else {
-                    loginBtn.setAttribute("disabled", "disabled");
-                    throw new Error(
-                        "No such patient exists. Please register first."
-                    );
-                }
-            } else {
-                loginBtn.setAttribute("disabled", "disabled");
-                throw new Error("An error occurred while verifying the user.");
-            }
-        } catch (error) {
-            console.error("Error checking user existence:", error);
-            notificationDiv.textContent = error.message;
-            notificationDiv.style.display = "block";
-        }
-    }
 
     function validateForm() {
         if (
@@ -69,42 +19,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
     loginForm.addEventListener("submit", function (event) {
         event.preventDefault(); // Отменить стандартное поведение отправки формы
+        validateForm(); // Проверяем заполнение формы перед отправкой запроса
+
+        if (loginBtn.hasAttribute("disabled")) {
+            // Если форма не заполнена, прерываем выполнение запроса
+            return;
+        }
 
         const email = loginEmailInput.value;
         const password = loginPasswordInput.value;
 
-        // Создание объекта с данными для отправки на сервер
-        const data = {
-            email: email,
-            password: password,
-        };
-
-        // Опции для fetch-запроса
-        const options = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-        };
-
-        // Выполнение POST-запроса на сервер (необходимо указать правильный URL)
-        fetch("http://localhost:3000/patients", options)
+        // Проверяем, существует ли пользователь с таким email на сервере
+        fetch(`http://localhost:3000/patients?email=${email}`)
             .then((response) => {
-                if (response.ok) {
-                    return response.json();
-                } else {
+                if (!response.ok) {
                     throw new Error("Network response was not ok");
                 }
+                return response.json();
             })
             .then((data) => {
-                const serverPassword = data.password;
-
-                if (password === serverPassword) {
-                    document.cookie = `userID=${data.id}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
-                    window.location.href = "create_meeting.html";
-                } else {
+                if (data.length === 0) {
+                    // Если пользователь не существует, показываем сообщение об ошибке
                     notificationDiv.style.display = "block";
+                } else {
+                    // Если пользователь найден, проверяем пароль
+                    const user = data[0];
+                    if (password === user.password) {
+                        document.cookie = `userID=${user.id}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
+                        window.location.href = "create_meeting.html";
+                    } else {
+                        // Если пароль неверный, показываем сообщение об ошибке
+                        notificationDiv.style.display = "block";
+                    }
+
+                    const options = {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(dataForLogin),
+                    };
+
+                    fetch("http://localhost:3000/patients", options)
+                        .then((response) => {
+                            if (!response.ok) {
+                                throw new Error("Network response was not ok");
+                            }
+                            return response.json();
+                        })
+                        .then((data) => {
+                            document.cookie = `userID=${userId}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
+                            window.location.href = "create_meeting.html";
+                        })
+                        .catch((error) => {
+                            console.error(
+                                "There was a problem with the fetch operation:",
+                                error
+                            );
+                        });
                 }
             })
             .catch((error) => {
@@ -129,3 +101,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
