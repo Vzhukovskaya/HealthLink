@@ -54,10 +54,34 @@
       "password": "123Abc123abc"
     },
     {
-      "id": 63,
-      "name": "Ann Brown",
-      "email": "ann@mail.ru",
-      "password": "123abc123Abc"
+      "email": "ignateva-darya@mail.ru",
+      "password": "12345",
+      "id": 6
+    },
+    {
+      "email": "ignateva-darya@mail.ru",
+      "password": "12345",
+      "id": 7
+    },
+    {
+      "email": "ignateva-darya@mail.ru",
+      "password": "123345",
+      "id": 8
+    },
+    {
+      "email": "ignateva-darya@mail.ru",
+      "password": "123456",
+      "id": 9
+    },
+    {
+      "email": "ignateva-darya@mail.ru",
+      "password": "12345",
+      "id": 10
+    },
+    {
+      "email": "ignateva-darya@mail.ru",
+      "password": "12345",
+      "id": 11
     }
   ],
   "meetings": [
