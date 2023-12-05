@@ -1,32 +1,30 @@
 /* Fonts: */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap&family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap&family=Roboto:wght@400;500&display=swap");
 
 /* font-family: 'Inter', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
 /* Patient Registration Page */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   width: 1420px;
   height: 100vh;
-  background: linear-gradient(to right, #FFFFFF 51%, #F5F7F9 49%);
+  background: linear-gradient(to right, #ffffff 51%, #f5f7f9 49%);
 }
-
 
 /* Basic styles for header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 20px;
+  padding: 15px;
 }
 
 .header-logo {
   width: 250px;
   height: 79px;
-  margin-left: 55px
+  margin-left: 55px;
 }
 
 nav ul {
@@ -42,23 +40,22 @@ nav ul li:not(:last-child) {
 }
 
 nav ul li a {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 17px;
   font-weight: 400;
 
   padding: 8px 39px;
-  border: 1px solid #1B263B;
+  border: 1px solid #1b263b;
   border-radius: 8px;
 
   text-decoration: none;
-  color: #FFF;
-  background-color: #1B263B;
+  color: #fff;
+  background-color: #1b263b;
 }
 
 nav ul li a:hover {
-  background-color: #415A77;
-  border: 1px solid #415A77;
-
+  background-color: #415a77;
+  border: 1px solid #415a77;
 }
 
 /* Styles for main section */
@@ -66,11 +63,12 @@ main {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
-  gap: 45px;
+  gap: 60px;
 }
 
 .registration-form--title {
   font-size: 48px;
+  margin-bottom: 0;
 }
 
 .registration-form--descr {
@@ -97,7 +95,7 @@ main {
   border-radius: 10px;
   border: 1px solid #000;
   background: #F5F5F5;
-  margin-bottom: 10px;
+  margin-bottom: 3pxж
 }
 
 .error-message {
@@ -110,10 +108,10 @@ main {
 .form-btn {
   font-size: 17px;
   width: 250px;
-  margin: 25px 110px 0;
+  margin: 35px 110px 0;
 
   padding: 10px 20px;
-  border: 1px solid #1B263B;
+  border: 1px solid #1b263b;
   border-radius: 10px;
 
   cursor: pointer;
@@ -122,23 +120,26 @@ main {
 }
 
 .form-btn:hover {
-  background-color: #415A77;
-  border: 1px solid #415A77;
-
+  background-color: #415a77;
+  border: 1px solid #415a77;
 }
 
 .login-info {
-  margin: 30px 140px 0;
+  margin: 50px 140px 0;
+}
+
+.l {
+  margin: 50px 60px 0;
 }
 
 .login-info span {
   font-weight: 700;
-  color: #1B263B;
-  text-decoration: underline #1B263B;
+  color: #1b263b;
+  text-decoration: underline #1b263b;
 }
 
 .quote-section {
-  margin-top: 25px;
+  margin: 20px 0 0 40px;
 }
 
 .quote-section img {
@@ -152,7 +153,7 @@ main {
 }
 
 .blockquote::before {
-  content: '';
+  content: "";
   display: block;
   width: 62px;
   height: 49px;
@@ -162,11 +163,11 @@ main {
   top: 20px;
 
   background-repeat: no-repeat;
-  background-image: url(/images/quotes1.svg)
+  background-image: url(/images/quotes1.svg);
 }
 
 .blockquote::after {
-  content: '';
+  content: "";
   display: block;
   width: 62px;
   height: 49px;
@@ -189,6 +190,10 @@ main {
 
 .quote-footer {
   margin-top: 20px;
+}
+
+.hidden {
+  display: none;
 }
 
 .password-info {
@@ -225,7 +230,7 @@ main {
 .eye-icon {
   position: absolute;
   right: 15px;
-  top: 67%;
+  top: 74%;
   transform: translateY(-50%);
   cursor: pointer;
 }

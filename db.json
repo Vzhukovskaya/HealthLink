@@ -42,14 +42,16 @@
       "password": "zxcvb"
     },
     {
+      "id": 45,
+      "name": "Daria Komarenko",
       "email": "ignateva-darya@mail.ru",
-      "password": "1234567",
-      "id": 4
+      "password": "Abc123abc"
     },
     {
-      "email": "ignateva-darya@mail.ru",
-      "password": "1234567",
-      "id": 5
+      "id": 81,
+      "name": "Daria Komarenko",
+      "email": "ignadarya@mail.ru",
+      "password": "123Abc123abc"
     },
     {
       "email": "ignateva-darya@mail.ru",
@@ -81,7 +83,7 @@
       "password": "12345",
       "id": 11
     }
-  ],
+],
   "meetings": [
     {
       "id": 1,

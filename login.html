@@ -1,87 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patient Login</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="icon" href="images/Logo_hands.png" />
-  </head>
 
-  <body>
-    <header class="header">
-      <img class="header-logo" src="/images/main.logo.svg" alt="Logo" />
-      <nav>
-        <ul>
-          <li><a href="EmergencyContact.html">Emergency Contact</a></li>
-          <li><a href="#">I'm a Doctor</a></li>
-          <li><a href="#">I'm a Patient</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Login</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="icon" href="images/Logo_hands.png" />
+</head>
 
-    <main>
-      <div class="registration-form">
-        <h1 class="registration-form--title">Patient Login</h1>
-        <p class="registration-form--descr">
-          Use your personal account to make an appointment with a doctor and
-          follow the established recommendations.
-        </p>
+<body>
+  <header class="header">
+    <img class="header-logo" src="/images/main.logo.svg" alt="Logo" />
+    <nav>
+      <ul>
+        <li><a href="EmergencyContact.html">Emergency Contact</a></li>
+        <li><a href="#">I'm a Doctor</a></li>
+        <li><a href="#">I'm a Patient</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <form class="registration-form" id="patientLoginForm">
-          <label for="email">Email:</label>
-          <input type="email" id="loginEmail" name="email" required />
-          <div class="error-message" id="loginEmail-error"></div>
+  <main>
+    <div class="registration-form">
+      <h1 class="registration-form--title">Patient Login</h1>
+      <p class="registration-form--descr">
+        Use your personal account to make an appointment with a doctor and
+        follow the established recommendations.
+      </p>
 
-          <div class="password-field">
-            <label for="password">Password:</label>
-            <input
-              type="password"
-              id="loginPassword"
-              name="password"
-              required
-            />
-            <span id="showPassword" class="eye-icon"
-              ><i class="fa-solid fa-eye"></i
-            ></span>
-          </div>
-          <div class="error-message" id="loginPassword-error"></div>
-          <p class="password-info"><a href="#">Forgot Password ?</a></p>
+      <form class="registration-form" id="patientLoginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="loginEmail" name="email" required />
+        <div class="error-message" id="loginEmail-error"></div>
 
-          <div id="notificationDiv">
-            <p>Failed.<br />Please check login and password for correctness.</p>
-          </div>
-
-          <button class="form-btn" id="loginBtn" type="submit" disabled>
-            Login
-          </button>
-        </form>
-
-        <p class="login-info">
-          Don’t have an account.
-          <a href="registration.html"><span>Register as a patient</span></a>
-        </p>
-      </div>
-
-      <div class="quote-section">
-        <img
-          src="images/icon1-registration.png"
-          alt="Physical therapy exercise"
-        />
-        <div class="blockquote">
-          <p class="quote-descr">
-            It is no measure of health to be well adjusted to a profoundly sick
-            society.
-          </p>
-          <p class="quote-footer">-- Jiddu Krishnamurti</p>
+        <div class="password-field">
+          <label for="password">Password:</label>
+          <input type="password" id="loginPassword" name="password" required />
+          <span id="showPassword" class="eye-icon"><i class="fa-solid fa-eye"></i></span>
         </div>
-      </div>
-    </main>
 
-    <script
-      src="https://kit.fontawesome.com/944885f069.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="script/login.js"></script>
-  </body>
+        <div class="error-message" id="loginPassword-error"></div>
+        <p class="password-info"><a href="#">Forgot Password ?</a></p>
+        <div id="notificationDiv"></div>
+        <button class="form-btn" id="loginBtn" type="submit">Login</button>
+
+        <p class="login-info l">Don’t have an account. <a href="registration.html"><span>Register as a
+              patient</span></a>
+        </p>
+    </div>
+
+    <div class="quote-section">
+      <img src="images/icon1-registration.png" alt="Physical therapy exercise" />
+      <div class="blockquote">
+        <p class="quote-descr">
+          It is no measure of health to be well adjusted to a profoundly sick
+          society.
+        </p>
+        <p class="quote-footer">-- Jiddu Krishnamurti</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://kit.fontawesome.com/944885f069.js" crossorigin="anonymous"></script>
+  <script src="script/login.js"></script>
+</body>
+
 </html>

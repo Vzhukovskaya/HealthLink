@@ -7,11 +7,14 @@
 /* Patient Registration Page */
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Получение элементов формы и кнопки
+    const fullNameInput = document.getElementById('fullName');
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
     const confirmPasswordInput = document.getElementById('confirmPassword');
     const form = document.getElementById('patientRegistrationForm');
     const registerBtn = document.getElementById('registerBtn');
+    const showPasswordIcon = document.getElementById('showPassword');
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
@@ -20,18 +23,20 @@ document.addEventListener('DOMContentLoaded', function () {
     registerBtn.setAttribute('disabled', 'disabled');
 
     function validateForm() {
+        const isFullNameFilled = fullNameInput.value.trim() !== '';
         const isEmailFilled = emailInput.value.trim() !== '';
         const isPasswordFilled = passwordInput.value.trim() !== '';
         const isConfirmPasswordFilled = confirmPasswordInput.value.trim() !== '';
 
-        if (isEmailFilled && isPasswordFilled && isConfirmPasswordFilled) {
+        if (isFullNameFilled && isEmailFilled && isPasswordFilled && isConfirmPasswordFilled) {
             registerBtn.removeAttribute('disabled'); // Активируем кнопку, если все поля заполнены
         } else {
             registerBtn.setAttribute('disabled', 'disabled'); // Деактивируем кнопку, если есть незаполненные поля
         }
     }
 
-    // Вызов функций:
+    // Вызов функций при вводе данных в поля:
+    fullNameInput.addEventListener('input', validateForm);
     emailInput.addEventListener('input', validateForm);
     passwordInput.addEventListener('input', validateForm);
     confirmPasswordInput.addEventListener('input', validateForm);
@@ -40,18 +45,20 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault(); // Отменить стандартное поведение отправки формы
 
         // Вызов функций для валидации полей формы и сохранение результатов
+        const isFullNameValid = validateFullName(fullNameInput);
         const isEmailValid = validateEmail(emailInput);
         const isPasswordValid = validatePassword(passwordInput);
         const isConfirmPasswordValid = validateConfirmPassword(confirmPasswordInput);
 
         // Проверка, есть ли ошибки валидации перед отправкой данных на сервер
-        if (!isEmailValid || !isPasswordValid || !isConfirmPasswordValid) {
+        if (!isFullNameValid || !isEmailValid || !isPasswordValid || !isConfirmPasswordValid) {
             return; // Если есть ошибки, остановить отправку формы на сервер
         }
 
         // Создание объекта с данными для отправки на сервер
         const data = {
             id: getRandomUniqueId(),
+            name: fullNameInput.value,
             email: emailInput.value,
             password: passwordInput.value
         };
@@ -91,6 +98,21 @@ document.addEventListener('DOMContentLoaded', function () {
     function displayUserID(id) {
         const replyDiv = document.getElementById('replyDiv');
         replyDiv.innerHTML = `Thank you for registration. Your ID: ${id}`;
+    }
+
+    // Функция для валидации полного имени
+    function validateFullName(input) {
+        const errorMessage = document.getElementById('fullName-error');
+        if (!input.value.trim().includes(' ')) {
+            errorMessage.textContent = 'Please enter both your name and surname';
+            errorMessage.style.color = 'red';
+            input.style.borderColor = 'red';
+            return false; // Возвращаем false, если есть ошибка валидации
+        } else {
+            errorMessage.textContent = '';
+            input.style.borderColor = '';
+            return true; // Возвращаем true, если поле валидно
+        }
     }
 
     // Функция для проверки корректности email
@@ -154,6 +176,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return newId;
     }
+
+    // Скрипт для работы режима "просмотра" пароля:
+    showPasswordIcon.addEventListener('click', function () {
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+        } else {
+            passwordInput.type = 'password';
+        }
+    });
 });
 
 
