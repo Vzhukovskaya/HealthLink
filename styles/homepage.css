@@ -333,3 +333,65 @@ ul li a:hover {
   cursor: pointer;
   margin-right: 10px;
 }
+
+/* Первый медиа-запрос для больших экранов (больше 1400px) */
+
+@media screen and (min-width: 1401px) {
+  .mission__left-part {
+    margin-top: 50px;
+  }
+
+  .intro__title {
+    margin: 30px auto;
+  }
+
+  .intro__right-part {
+    width: 70%;
+    height: 900px;
+    margin-top: -150px;
+  }
+
+  .mission__left-part {
+    /* Стили для экранов больше чем 1400px */
+    width: 900px;
+    height: 700px;
+    margin-left: 60px;
+  }
+}
+
+/* Второй медиа-запрос для больших экранов (десктопов и т.д.) */
+@media screen and (min-width: 1025px) {
+  .intro__right-part {
+    width: 100vh;
+    height: 826px;
+    margin-top: -140px;
+  }
+
+  .mission__left-part {
+    width: 798px;
+    height: 629px;
+    margin-left: 40px;
+  }
+
+  .intro__left-part {
+    margin: 50px 0;
+  }
+}
+
+/* Третий медиа-запрос для планшетов */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .intro__right-part {
+    width: 100vh;
+    margin-top: -150px;
+  }
+
+  .mission__left-part {
+    width: 600px;
+    height: 450px;
+    margin-left: 20px;
+  }
+
+  .intro__left-part {
+    margin: 50px 0;
+  }
+}

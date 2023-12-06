@@ -8,7 +8,7 @@ font-family: 'Roboto', sans-serif; */
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  width: 1420px;
+  min-width: 1420px;
   height: 100vh;
   background: linear-gradient(to right, #ffffff 51%, #f5f7f9 49%);
 }
@@ -141,17 +141,19 @@ main {
 
 .quote-section {
   margin: 20px 0 0 40px;
+  z-index: -1;
 }
 
 .quote-section img {
   max-width: 100%;
   height: auto;
+  margin-top: -100px;
 }
 
 .blockquote {
   text-align: center;
-  margin-top: -20px;
-  margin-left: 3em;
+  margin-top: -70px;
+  margin-left: 5em;
 }
 
 .blockquote::before {
