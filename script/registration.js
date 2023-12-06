@@ -85,20 +85,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Сохранение ID пользователя в куки
                 document.cookie = `userID=${data.id}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
 
-                // Вызов функции для вывода ID пользователя:
-                displayUserID(data.id);
+                // Переход на страницу login.html
+                window.location.href = "login.html";
 
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
             });
     });
-
-    // Функция для вывода ID пользователя в replyDiv.
-    function displayUserID(id) {
-        const replyDiv = document.getElementById('replyDiv');
-        replyDiv.innerHTML = `Thank you for registration. Your ID: ${id}`;
-    }
 
     // Функция для валидации полного имени
     function validateFullName(input) {

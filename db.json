@@ -112,6 +112,12 @@
       "email": "khraban@gmail.com",
       "password": "Еуфе171717",
       "id": 89
+    },
+    {
+      "id": 22,
+      "name": "Kirill Khraban",
+      "email": "testKirill@gmail.com",
+      "password": "Kirill19"
     }
   ],
   "meetings": [
