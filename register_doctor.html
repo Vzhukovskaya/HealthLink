@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Patient Registration</title>
+    <link rel="stylesheet" href="/styles/register_doctor.css" />
+    <link rel="icon" href="images/Logo_hands.png" />
+  </head>
+
+  <body>
+    <header class="header">
+      <img class="header-logo" src="/images/main.logo.svg" alt="Logo" />
+      <nav>
+        <ul>
+          <li><a href="EmergencyContact.html">Emergency Contact</a></li>
+          <li><a href="#">I'm a Doctor</a></li>
+          <li><a href="login.html">I'm a Patient</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="registration-form">
+        <h1 class="registration-form--title">Doctor Register</h1>
+        <p class="registration-form--descr">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        </p>
+
+        <form id="patientRegistrationForm">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <div class="error-message" id="email-error"></div>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <div class="error-message" id="password-error"></div>
+
+          <label for="confirmPassword">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+          />
+          <div class="error-message" id="confirmPassword-error"></div>
+
+          <button class="form-btn" id="registerBtn" type="submit">
+            Register Doctor
+          </button>
+        </form>
+        <div id="replyDiv"></div>
+        <p class="login-info">
+          Already have an account.
+          <a href="login.html"><span>Login as a doctor</span></a>
+        </p>
+      </div>
+
+      <div class="quote-section">
+        <img src="images/Public health-rafiki 1.png" alt="People" />
+        <div class="blockquote">
+          <p class="quote-descr">
+            He who has health, has hope; and he who has hope, has everything.
+          </p>
+          <p class="quote-footer">-- Thomas Carlyle</p>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/944885f069.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script/registration.js"></script>
+  </body>
+</html>
