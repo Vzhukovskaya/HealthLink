@@ -309,6 +309,11 @@ td {
   line-height: 150%;
 }
 
+.modal__agree-btn:disabled:hover {
+  background: grey;
+  border: none;
+}
+
 .modal__agree-btn:hover {
   cursor: pointer;
   border: 2px solid #FFA14E;
@@ -380,4 +385,9 @@ label {
   margin-bottom: 8px;
   font-size: 1.25rem;
   color: #415A77;
+}
+
+.error-message {
+  font-size: 20px;
+  color: red;
 }
