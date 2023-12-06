@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Patient Login</title>
-  <link rel="stylesheet" href="styles/style.css" />
+  <title>Doctor Login</title>
+  <link rel="stylesheet" href="styles/loginDoc.css" />
   <link rel="icon" href="images/Logo_hands.png" />
 </head>
 
@@ -15,21 +15,21 @@
     <nav>
       <ul>
         <li><a href="EmergencyContact.html">Emergency Contact</a></li>
-        <li><a href="loginDoc.html">I'm a Doctor</a></li>
-        <li><a href="login.html">I'm a Patient</a></li>
+        <li><a href="#">I'm a Doctor</a></li>
+        <li><a href="#">I'm a Patient</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <div class="registration-form">
-      <h1 class="registration-form--title">Patient Login</h1>
+      <h1 class="registration-form--title">Doctor Login</h1>
       <p class="registration-form--descr">
         Use your personal account to make an appointment with a doctor and
         follow the established recommendations.
       </p>
 
-      <form class="registration-form" id="patientLoginForm">
+      <form class="registration-form" id="doctorLoginForm">
         <label for="email">Email:</label>
         <input type="email" id="loginEmail" name="email" required />
         <div class="error-message" id="loginEmail-error"></div>
@@ -42,22 +42,19 @@
 
         <div class="error-message" id="loginPassword-error"></div>
         <p class="password-info"><a href="#">Forgot Password ?</a></p>
-        <div id="notificationDiv">Please, click on the link below to proceed registration, your account does not exist
-          yet.</div>
+        <div id="notificationDiv"></div>
         <button class="form-btn" id="loginBtn" type="submit">Login</button>
 
         <p class="login-info l">Don’t have an account. <a href="registration.html"><span>Register as a
-              patient</span></a>
+              doctor</span></a>
         </p>
-      </form>
     </div>
 
     <div class="quote-section">
-      <img src="images/icon1-registration.png" alt="Physical therapy exercise" />
+      <img src="images/Public health-rafiki 1.png" alt="Public health" />
       <div class="blockquote">
         <p class="quote-descr">
-          It is no measure of health to be well adjusted to a profoundly sick
-          society.
+          He who has health, has hope; and he who has hope, has everything.
         </p>
         <p class="quote-footer">-- Jiddu Krishnamurti</p>
       </div>

@@ -4,6 +4,10 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+main {
+  width: 50vw;
+}
+
 .sidebar {
   background-color: #fcfcfc;
   height: 100vh;
@@ -339,7 +343,7 @@ td {
 .modal__create-meeting_form {
   display: none;
   width: 700px;
-  height: 670px;
+  height: 770px;
   border-radius: 20px;
   border: 2px solid #a8a8a8;
   background: #fff;

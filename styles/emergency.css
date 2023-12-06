@@ -5,106 +5,106 @@
 font-family: 'Roboto', sans-serif; */
 
 body {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    width: 1420px;
-    height: 100vh;
-    background: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  width: 1420px;
+  height: 100vh;
+  background: #FFFFFF;
 }
 
 
 /* styles for header */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding: 20px;
+  padding: 20px;
 }
 
 .emergency-logo img {
-    width: 220px;
-    height: 79px;
-    margin-left: 55px
+  width: 250px;
+  height: 79px;
+  margin-left: 55px
 }
 
 nav ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 nav ul li {
-    display: inline-block;
+  display: inline-block;
 }
 
 nav ul li:not(:last-child) {
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
 nav ul li a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 17px;
-    font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
 
-    padding: 8px 39px;
-    border: 1px solid #1B263B;
-    border-radius: 8px;
+  padding: 8px 39px;
+  border: 1px solid #1B263B;
+  border-radius: 8px;
 
-    text-decoration: none;
-    color: #FFF;
-    background-color: #1B263B;
+  text-decoration: none;
+  color: #FFF;
+  background-color: #1B263B;
 }
 
 nav ul li a:hover {
-    background-color: #415A77;
-    border: 1px solid #415A77;
+  background-color: #415A77;
+  border: 1px solid #415A77;
 
 }
 
 /* Styles for main section */
 section {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    column-gap: 3em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  column-gap: 3em;
 }
 
 .emergency-page {
-    display: flex;
-    column-gap: 3em;
+  display: flex;
+  column-gap: 3em;
 }
 
 .emergency-page_text {
-    margin-left: 5em;
-    margin-top: 3em;
+  margin-left: 5em;
+  margin-top: 3em;
 }
 
 .emergency-page_text h1 {
-    color: #1B263B;
-    font-family: Inter;
-    font-size: 2.2em;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+  color: #1B263B;
+  font-family: Inter;
+  font-size: 2.2em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .emergency-page_text p {
-    color: #000;
-    font-family: Inter;
-    font-size: 1.2em;
-    font-style: normal;
-    font-weight: 400;
+  color: #000;
+  font-family: Inter;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .emergency-page_img {
 
-    max-width: 40%;
-    height: auto;
+  max-width: 40%;
+  height: auto;
 
 
 
 }
 
 .emergency-contact {
-    margin-top: 4em;
-    line-height: 3em;
+  margin-top: 4em;
+  line-height: 3em;
 }
