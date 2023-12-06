@@ -63,7 +63,7 @@ function mergeData(meetings, doctors, user) {
         }
 
         let filterResult = doctors.filter(
-            (item) => item.id == meeting.doctorID
+            (item) => item.id == meeting.doctorId
         );
         const doctor = filterResult.length > 0 ? filterResult[0] : "неизвестно";
 
@@ -78,8 +78,7 @@ function mergeData(meetings, doctors, user) {
 }
 // Функция logout
 function logout() {
-    document.localStorage.clear();
-    document.sessionStorage.clear();
+    document.cookie = `userID=;expires=${new Date(0)}`;
     window.location.href = "login.html";
 }
 // Главная функция main(), которую мы и вызываем на скрипте страницы
