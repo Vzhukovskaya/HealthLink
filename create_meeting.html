@@ -105,7 +105,7 @@
         <input id="modalDateInput" type="date" name="modalDateInput">
         <label for="modalSelectTime">Chose time:</label>
         <select id="modalSelectTime" name="modalSelectTime">
-          <option value="">Choose time for yor visit</option>
+          <option disabled="disabled">Choose time for yor visit</option>
           <option>10:00AM</option>
           <option>11:00AM</option>
           <option>12:00AM</option>
@@ -119,9 +119,10 @@
         </select>
         <label for="modalSelectDoctor">Chose your doctor:</label>
         <select id="modalSelectDoctor" name="modalSelectDoctor">
-          <option value="">Chose your doctor from the list</option>
+          <option value="" disabled="disabled">Chose your doctor from the list</option>
         </select>
       </form>
+      <div id="errorMessage" class="error-message"></div>
       <div class="modal__buttons">
         <button id="modalFormAgreeBtn" class="modal__agree-btn"><img src="images/check (1).svg" alt="">
           Create Meet</button>
