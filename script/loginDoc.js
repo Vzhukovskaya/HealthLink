@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const loginEmailInput = document.getElementById("loginEmail");
     const loginPasswordInput = document.getElementById("loginPassword");
-    const loginForm = document.getElementById("patientLoginForm");
+    const loginForm = document.getElementById("doctorLoginForm");
     const loginBtn = document.getElementById("loginBtn");
     const notificationDiv = document.getElementById("notificationDiv");
     const showPasswordIcon = document.getElementById("showPassword");
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = loginPasswordInput.value;
 
         // Проверяем, существует ли пользователь с таким email на сервере
-        fetch(`http://localhost:3000/patients?email=${email}`)
+        fetch(`http://localhost:3000/doctors?email=${email}`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     notificationDiv.style.display = "block";
                 } else {
                     // Если пользователь найден, проверяем пароль
-                    const user = data[0];
-                    if (password === user.password) {
-                        document.cookie = `userID=${user.id}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
-                        window.location.href = "create_meeting.html";
+                    const doctor = data[0];
+                    if (password === doctor.password) {
+                        document.cookie = `doctorID=${doctor.id}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
+                        window.location.href = "docdashboard.html";
                     } else {
                         // Если пароль неверный, показываем сообщение об ошибке
                         notificationDiv.style.display = "block";
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         body: JSON.stringify(dataForLogin),
                     };
 
-                    fetch("http://localhost:3000/patients", options)
+                    fetch("http://localhost:3000/doctors", options)
                         .then((response) => {
                             if (!response.ok) {
                                 throw new Error("Network response was not ok");
@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             return response.json();
                         })
                         .then((data) => {
-                            document.cookie = `userID=${userId}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
-                            window.location.href = "create_meeting.html";
+                            document.cookie = `doctorID=${doctorId}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
+                            window.location.href = "docdashboard.html";
                         })
                         .catch((error) => {
                             console.error(

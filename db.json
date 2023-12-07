@@ -118,16 +118,15 @@
       "name": "Kirill Khraban",
       "email": "testKirill@gmail.com",
       "password": "Kirill19"
+    },
+    {
+      "id": 12,
+      "name": "John Smith",
+      "email": "john@mail.ru",
+      "password": "123Abx123abc"
     }
   ],
   "meetings": [
-    {
-      "id": 1,
-      "date": "Apr 23, 2021 - 10.00AM",
-      "patientId": 1,
-      "doctorId": 1,
-      "meetLink": "https://meet.google.com/gfa-caog-gwq"
-    },
     {
       "id": 3,
       "date": "Apr 23, 2021 - 12.00AM",
@@ -136,27 +135,44 @@
       "meetLink": "https://meet.google.com/gfa-caog-gwr"
     },
     {
-      "id": 2,
-      "date": "Apr 23, 2021 - 12.00AM",
-      "patientId": 1,
-      "doctorId": 2,
-      "meetLink": "https://meet.google.com/gfa-caog-gwr"
-    },
-    {
-      "date": "2023-12-20 - 02:00PM",
-      "patientId": 1,
-      "doctorId": 2,
-      "meetLink": "https://meet.google.com/gfa-caog-gytr",
-      "requested": false,
-      "id": 4
-    },
-    {
       "date": "2023-12-06 - 10:00AM",
       "patientId": 45,
       "doctorId": 3,
       "meetLink": "https://meet.google.com/gfa-caog-gytr",
       "requested": false,
       "id": 5
+    },
+    {
+      "date": "2023-12-07 - 10:00AM",
+      "patientId": 1,
+      "doctorId": 2,
+      "meetLink": "https://meet.google.com/gfa-caog-gytr",
+      "requested": false,
+      "id": 7
+    },
+    {
+      "date": "2023-12-07 - 10:00AM",
+      "patientId": 1,
+      "doctorId": 1,
+      "meetLink": "https://meet.google.com/gfa-caog-gytr",
+      "requested": false,
+      "id": 9
+    },
+    {
+      "date": "2023-12-07 - 10:00AM",
+      "patientId": 1,
+      "doctorId": 1,
+      "meetLink": "https://meet.google.com/gfa-caog-gytr",
+      "requested": false,
+      "id": 10
+    },
+    {
+      "date": "2023-12-15 - 03:00PM",
+      "patientId": 12,
+      "doctorId": 1,
+      "meetLink": "https://meet.google.com/gfa-caog-gytr",
+      "requested": false,
+      "id": 11
     }
   ],
   "prescriptions": [
