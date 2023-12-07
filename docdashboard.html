@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/docdashboard.css" />
+    <link rel="icon" href="images/Logo_hands.png" />
+    <title>My patients</title>
+  </head>
+
+  <body>
+    <main>
+      <aside class="sidebar">
+        <div class="sidebar__logo">
+          <a href="homepage.html">
+            <img
+              src="images/Logo_hands.png"
+              alt="logo"
+              class="sidebar__logo_logo" />
+            <img
+              src="images/Health Link.svg"
+              alt=""
+              class="sidebar__logo_title"
+          /></a>
+        </div>
+        <div class="sidebar__menu">
+          <div class="sidebar__menu_item">
+            <div class="sidebar__menu_item_title">Sessions</div>
+            <div class="sidebar__menu_option">
+              <img
+                src="images/chatIcon.svg"
+                alt=""
+                class="sidebar__menu_option_icon"
+              />
+              <a href="#" class="sidebar-greytext">Chat with HealthBot</a>
+            </div>
+            <div class="sidebar__menu_option">
+              <img
+                src="images/queueIcon.svg"
+                alt=""
+                class="sidebar__menu_option_icon"
+              />
+              <a href="docdashboard.html" class="sidebar-greytext"
+                >Patient Waiting Queue</a
+              >
+            </div>
+          </div>
+          <div class="sidebar__menu_item">
+            <div class="sidebar__menu_item_title other-options">
+              Other options
+            </div>
+            <div class="sidebar__menu_option">
+              <img
+                src="images/dashboard.png"
+                alt=""
+                class="sidebar__menu_option_icon"
+              />
+              <a href="homepage.html" class="sidebar-greytext">Homepage</a>
+            </div>
+            <div class="sidebar__menu_option">
+              <img
+                src="images/logout.png"
+                alt=""
+                class="sidebar__menu_option_icon"
+              />
+              <a
+                class="sidebar-greytext"
+                id="docDashboardLogout"
+                onclick="logout()"
+                >Logout</a
+              >
+            </div>
+          </div>
+        </div>
+      </aside>
+      <section class="main-section">
+        <div class="greeting-text">Good Afternoon</div>
+        <div class="table_title">Your patients list:</div>
+        <table id="doctorDashbordTable">
+          <tr class="table-head">
+            <th style="width: 20%">№</th>
+            <th style="width: 30%">Doctor Name</th>
+            <th style="width: 30%">Patient Name</th>
+            <th style="width: 45%">Date and Time</th>
+          </tr>
+          <tbody id="appointment-table"></tbody>
+        </table>
+      </section>
+      <div id="loading"></div>
+    </main>
+    <script src="script/docdashboard.js"></script>
+  </body>
+</html>
