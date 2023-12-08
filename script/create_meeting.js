@@ -29,11 +29,11 @@ modalCancelBtn.addEventListener('click', () => {
 //Открытие формы для создания встречи по нажатию на "Create meeting" в модальном окне и закрытие модального окна
 modalAgreeBtn.addEventListener('click', () => {
     modalCreateMeeting.style.display = 'none';
-    modalCreateMeetForm.style.display = 'block';
+    modalCreateMeetForm.style.display = 'flex';
 });
 //Открытие модального окна при нажатии на кнопку "Create meeting" на основной странице
 createMeetBtn.addEventListener('click', () => {
-    modalCreateMeeting.style.display = 'block';
+    modalCreateMeeting.style.display = 'flex';
 });
 //Закрытие и обновление формы при нажатии на "крестик"
 modalFormCloseBtn.addEventListener('click', () => {
