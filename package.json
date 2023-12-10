@@ -11,9 +11,7 @@
   "author": "valeriazhukovskaya789@gmail.com, Ignateva-darya@mail.ru, pieceofbondarenko@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "json-server": "^0.17.4",
-    "react": "^17.0.2"
+    "json-server": "^0.17.4"
   },
   "devDependencies": {
     "eslint": "^8.5.0",
