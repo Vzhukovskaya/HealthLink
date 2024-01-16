@@ -6,7 +6,7 @@ HealthLink.Community is a web-based platform designed to connect healthcare prof
 ## Team Members
 - **Team Lead**: @darikomarenko
 - **Tech Lead**: @Vzhukovskaya
-- **Frontend Developers**: @Vzhukovskaya, @darikomarenko, @lilibeth66
+- **Frontend Developers**: @Vzhukovskaya, @darikomarenko,@AnnaFrzn, @lilibeth66,
 - **Tester**: @Vzhukovskaya, @lilibeth66
 
 ## Features
