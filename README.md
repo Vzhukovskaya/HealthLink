@@ -1,5 +1,17 @@
 # HealthLink.Community
 
+[![GitHub license](https://img.shields.io/github/license/Vzhukovskaya/HealthLink.svg)](https://github.com/Vzhukovskaya/HealthLink/blob/main/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/Vzhukovskaya/HealthLink.svg)](https://GitHub.com/Vzhukovskaya/HealthLink/graphs/contributors/)
+[![GitHub issues](https://img.shields.io/github/issues/Vzhukovskaya/HealthLink.svg)](https://GitHub.com/Vzhukovskaya/HealthLink/issues/)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/Vzhukovskaya/HealthLink.svg)](https://GitHub.com/Vzhukovskaya/HealthLink/pulls/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+[![GitHub watchers](https://img.shields.io/github/watchers/Vzhukovskaya/HealthLink.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/Vzhukovskaya/HealthLink/watchers/)
+[![GitHub forks](https://img.shields.io/github/forks/Vzhukovskaya/HealthLink.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/Vzhukovskaya/HealthLink/network/)
+[![GitHub stars](https://img.shields.io/github/stars/Vzhukovskaya/HealthLink.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/Vzhukovskaya/HealthLink/stargazers/)
+
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/Vzhukovskaya/HealthLink)
+
 ## Description
 HealthLink.Community is a web-based platform designed to connect healthcare professionals and patients, providing a space for information exchange, consultation, and community support. Built with HTML/CSS and JavaScript, it offers a user-friendly interface and responsive design.
 
