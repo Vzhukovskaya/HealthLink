@@ -15,7 +15,8 @@ HealthLink.Community is a web-based platform designed to connect healthcare prof
 - **Information Repository**: Accurate and up-to-date health information.
 - **User Profiles**: Personalized profiles for both patients and healthcare professionals.
 - **Responsive Design**: Fully functional across various devices and screen sizes.
--
+- **Fetch API**: Send and receive data from server, browser cookies are recorded to save user ID, which generated during registration.
+- **Used async/await**: Work with asynchronous operations.
 
 ## Installation
 Clone the repository and install dependencies:
