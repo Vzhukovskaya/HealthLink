@@ -1,10 +1,7 @@
 # HealthLink.Community
 
-[![GitHub license](https://img.shields.io/github/license/Vzhukovskaya/HealthLink.svg)](https://github.com/Vzhukovskaya/HealthLink/blob/main/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/Vzhukovskaya/HealthLink.svg)](https://GitHub.com/Vzhukovskaya/HealthLink/graphs/contributors/)
-[![GitHub issues](https://img.shields.io/github/issues/Vzhukovskaya/HealthLink.svg)](https://GitHub.com/Vzhukovskaya/HealthLink/issues/)
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/Vzhukovskaya/HealthLink.svg)](https://GitHub.com/Vzhukovskaya/HealthLink/pulls/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 [![GitHub watchers](https://img.shields.io/github/watchers/Vzhukovskaya/HealthLink.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/Vzhukovskaya/HealthLink/watchers/)
 [![GitHub forks](https://img.shields.io/github/forks/Vzhukovskaya/HealthLink.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/Vzhukovskaya/HealthLink/network/)
